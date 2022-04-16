@@ -1,0 +1,265 @@
+body {
+width: 100%;
+height: 100%;
+margin:0 auto;
+}
+.menu-principal { /*--barra do topo junto com o banner--*/
+width: 100%;
+background-color: #252323;
+height:67px; /*--tamanho da faixa preta--*/
+}
+main, .content { /*--barra do topo junto com o banner para mexer posição--*/
+margin: 0 auto;
+width:980px;
+position: relative;
+}
+.logo {
+    float :left;
+    padding: 0px; /*--mexer na altura do banner img--*/
+    width:70%; /*--mexer nas imagens rede sociais--*/
+}
+.redes-sociais ul li {
+    margin-left:5px; /*--espaço entre as redes sociais--*/
+    display: inline-block;
+}
+.redes-sociais {
+    width:25%;
+    float:left;
+}
+.header-2 {
+    background-color: #FF2006; /*--cores do menus--*/
+    margin:-3px auto;
+    padding: 1px;
+    text-align: center; /*--menu no meio--*/ /*--retirar no futuro?--*/
+}
+.menu ul li {
+    display: inline-block;
+    color: #000000; /*--cores da letras menu--*/
+    margin-left: 15; /*--espaços entre o menu--*/
+}
+.menu ul li a:hover {
+    color: #ff2033; /*--cor do efeito letras menu--*/
+    border-bottom: 2px solid #ff2033;
+}
+.menu ul li:hover{
+    border-bottom: 0px solid #ff2033;
+}
+.menu ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 17;
+    text-transform: uppercase; /*--todas as letras maiusculo--*/
+}
+.menu {
+    width: 77%; /*--menu mais para direita--*/
+}
+.busca {
+    text-align: center; /*--retirar no futuro?--*/
+    width: 42%; /*--mexer menu direita esquerda--*/
+    float:right; /*--retirar no futuro?--*/
+}
+.busca input {
+    background-image: url('../img/lupa.png'); /*--img lupa--*/
+    background-repeat: no-repeat; /*--nao repetir lupa--*/
+    background-position: 96%; /*--lupa no canto--*/
+    height: 20px; /*--tamanho da barra menu--*/
+    padding: 12px;
+    width: 190px;
+    margin-top: -50px; /*--altura barra menu--*/
+    float: left; /*--retirar no futuro?--*/
+    background-color: #000000; /*--barra preta--*/
+    color:#ff2033; /*--cor do texto da barra--*/
+}
+.col-100 {
+    width: 100%;
+    position: relative;
+    float: left;
+    background: #f7e7e6;  /*-- brinquem com as cores--*/
+}
+button.slick-prev {
+    font-size: 0px; /*--setas--*/
+    border: none;
+    width: 56px;
+    height: 70px;
+    z-index: 9;
+    background-color: transparent;
+    position: absolute;
+    background-image: url(../img/anterior.png);
+    top: 35%;
+    left: 20%;
+}
+button.slick-next {
+    font-size: 0px; /*--setas--*/
+    border: none;
+    width: 56px;
+    height: 70px;
+    z-index: 9;
+    background-color: transparent;
+    position: absolute;
+    background-image: url(../img/proximo.png);
+    top: 35%;
+    right: 20%;
+}
+.slick-list {
+    width: 100%!important;
+}
+ .slick-initialized{
+     overflow: hidden;
+ }
+ .slick-dots li button {
+     font-size: 0px;
+     border: 5px solid #ff2033; /*--cor externo botao--*/
+     width: 26px;
+     height: 26px;
+     background: transparent;
+     border-radius: 50%;
+     cursor: pointer;
+ }
+ .slick-dots {
+     margin: 0 auto;
+     width: 50%;
+     position: absolute;
+     left: 41%;
+     top: 560px;
+ }
+li.slick-active button{
+    background: #000000;
+}
+ .slick-dots li {
+     padding-left: 10px;
+     display: inline-block;
+}
+.whatsapp {
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:30px;
+    right:110px;
+    text-align:center;
+    font-size:40px;
+    z-index:1000;
+    list-style: none;
+}
+.texto-destaque{
+    text-align: center;
+}
+.texto-destaque h1 {
+    text-transform: uppercase;
+    font-size: 30px;
+    color:#000000;
+}
+.texto-destaque strong{
+    color: #e32636;
+}
+.texto-destaque p {
+    font-size: 20px;
+    color:#000000;
+}
+.col-3 {
+    text-align: center;
+    padding-left: 15;
+    padding-right: 15px;
+    width: 29%;
+    float: left;
+    position: relative;
+}
+.bloco-imagem img {
+    margin: 0 auto;
+    width: 70%;   
+    height: auto;
+}
+.bloco-imagem {
+    height: 320px; /*--tamanho dos quadrados inicios--*/
+    border: 1px solid #c5c5c5;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 10px;
+}
+.bloco-imagem b, p {
+    text-align: center;
+}
+.bloco-texto {
+    margin-top: 2em;
+}
+h3 {
+    font-weight: normal!important;
+}
+.bloco-imagens-texto {
+    background-color: #f7e7e6; /*-- brinquem com as cores--*/
+}
+.bloco-imagens-texto::before { /*-- 6 banner inicio config--*/
+    width: 100%;
+    display: inline-block;
+    content: '';
+    height: 52px;
+    background: #4a514d;
+    background-image: url('../img/setinha.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.bloco-imagens-texto:after {
+    width: 100%;
+    display: inline-block;
+    content: '';
+    height: 70px;
+    background: #f7e7e6; /*-- brinquem com as cores--*/
+}
+.col-4{  /*-- rodape--*/
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+.col-4 img{
+    cursor: pointer;
+    margin: 0 auto;
+    padding-top: 1em;
+    vertical-align: middle;
+}
+.col-4 img:hover{
+    margin-top: 10px!important;
+    position: relative!important;
+    transform: scale(1,2); /*-- esticar rodape img--*/
+}
+.bloco-logos {
+    height: 170px; /*-- aumentar depois para o mercado livre--*/
+}
+.bloco-logos img {
+    margin-top: 50px;
+}
+.footer h3 { /*-- rodape--*/
+    text-align: left;
+}
+.footer {
+    background-image: url('../img/rodape.png');
+    color: #ffffff;
+}
+.footer-2 {
+    background-image: url('../img/rodape2.png');
+    color: #ffffff;
+    height:89px;
+}
+.footer p {
+    width: 81%; /*-- largura dos textos rodape psv aumento ft--*/
+    text-align: left;
+}
+.footer-2 p {
+    padding: 10px;
+}
+.local:before, .email:before, .telefone:before { /*-- chamando os 3--*/
+    content:'';
+    width: 23px;
+    height: 23px;
+    display: inline-block;
+    float: left;
+    background-repeat: no-repeat;
+    padding-left: 5px;
+}
+.local:before {
+    background-image: url('../img/local.png');
+}
+.email:before {
+    background-image: url('../img/email.png');
+}
+.telefone:before {
+    background-image: url('../img/telefone.png');
+}
