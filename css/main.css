@@ -1,86 +1,202 @@
 body {
-width: 100%;
-height: 100%;
-margin:0 auto;
+    width: 100%;
+    height: 100%;
+    margin:0 auto;
+    font-family: 'Lato', sans-serif;
+    background: var(--bg);
+    display:inline-block;
+    overflow-x: hidden;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
+
 .menu-principal { /*--barra do topo junto com o banner--*/
-width: 100%;
-background-color: #252323;
-height:67px; /*--tamanho da faixa preta--*/
+    width: 96%;
+    background-color: #252323;
+    height:4.5rem; /*--tamanho da faixa preta--*/
+    margin-top: .625rem; /*--update dia 29--*/
 }
-main, .content { /*--barra do topo junto com o banner para mexer posição--*/
-margin: 0 auto;
-width:980px;
-position: relative;
+
+main, .content, .content-1 { /*--barra do topo junto com o banner para mexer posição--*/
+    margin: 0 auto;
+    width:61.25rem;
+    position: relative;
 }
+
 .logo {
     float :left;
-    padding: 0px; /*--mexer na altura do banner img--*/
     width:70%; /*--mexer nas imagens rede sociais--*/
 }
-.redes-sociais ul li {
-    margin-left:5px; /*--espaço entre as redes sociais--*/
-    display: inline-block;
-}
+
 .redes-sociais {
     width:25%;
     float:left;
 }
+
+/*--menu--*/
 .header-2 {
-    background-color: #FF2006; /*--cores do menus--*/
-    margin:-3px auto;
-    padding: 1px;
+    background: linear-gradient( #c75157, #ff0000 );
+    margin:-0.1875rem auto;
+    padding: .0625rem;
     text-align: center; /*--menu no meio--*/ /*--retirar no futuro?--*/
+    font-weight: bold; /*--deixar em negrito--*/
 }
-.menu ul li {
-    display: inline-block;
-    color: #000000; /*--cores da letras menu--*/
-    margin-left: 15; /*--espaços entre o menu--*/
+
+#navbar {
+    width: 95%; /*--menu mais para direita--*/
 }
-.menu ul li a:hover {
-    color: #ff2033; /*--cor do efeito letras menu--*/
-    border-bottom: 2px solid #ff2033;
+
+#navbar ul {
+	list-style: none;
 }
-.menu ul li:hover{
-    border-bottom: 0px solid #ff2033;
-}
-.menu ul li a {
-    color: #000000;
-    text-decoration: none;
-    font-size: 17;
+
+#navbar ul li {
+	color: #000;
+	display: inline-block;
+	padding: 1rem;
+	position: relative;
     text-transform: uppercase; /*--todas as letras maiusculo--*/
+    font-weight: bold; /*--deixar em negrito--*/
 }
-.menu {
-    width: 77%; /*--menu mais para direita--*/
+
+#navbar ul li a {
+	color: #000;
+	text-decoration: none;
 }
+
+#navbar ul li ul {
+	display: none;
+}
+
+#navbar ul li:hover {
+	cursor: pointer;
+	background: #000000;
+	color: #ff2033;
+    z-index: 1; /*--tornar o submenu "absoluto"--*/
+    
+}
+
+#navbar ul li:hover a {
+	color: #ff2033;
+}
+
+#navbar ul li:hover ul {
+	display: block;
+	position: absolute;
+	left: 0;
+	margin-top: 1rem;
+    width: auto; /*--preencher todos os submenu--*/
+}
+
+#navbar ul li:hover ul li {
+	display: block;
+	background: #000000; /*--cor da barra submenu--*/
+    height: 3.625rem;
+}
+
+#navbar ul li:hover ul li a {
+	color: #ff2033;
+}
+
+#navbar ul li:hover ul li:hover {
+	background: #e0e0e0;
+	color: inherit;
+}
+
+#navbar ul li:hover ul li span {
+	float: right;
+	color: #fff;
+	background: #ff2033;
+	padding: 0.2rem 0.5rem;
+	text-align: center;
+	font-size: 0.8rem;
+	border-radius: .3125rem;
+}
+
+#navbar ul li:hover ul li:hover span {
+	background: #000000;
+}
+
+#navbar a {
+	margin: 1.25rem;
+}
+
+#showcase {
+	display: flex;
+	flex-direction: column;
+	height: 18.75rem;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 0 2rem;
+	background: coral;
+}
+
+#showcase h1 {
+	font-size: 4rem;
+	color: #fff;
+}
+/*--menu--*/
+
 .busca {
     text-align: center; /*--retirar no futuro?--*/
-    width: 42%; /*--mexer menu direita esquerda--*/
+    width: 68%; /*--mexer menu direita esquerda--*/
     float:right; /*--retirar no futuro?--*/
 }
+
 .busca input {
     background-image: url('../img/lupa.png'); /*--img lupa--*/
     background-repeat: no-repeat; /*--nao repetir lupa--*/
     background-position: 96%; /*--lupa no canto--*/
-    height: 20px; /*--tamanho da barra menu--*/
-    padding: 12px;
-    width: 190px;
-    margin-top: -50px; /*--altura barra menu--*/
+    height: 2.25rem; /*--tamanho da barra menu--*/
+    padding: .75rem;
+    width: 18.125rem;
+    margin-top: -3.125rem; /*--altura barra menu--*/
     float: left; /*--retirar no futuro?--*/
     background-color: #000000; /*--barra preta--*/
     color:#ff2033; /*--cor do texto da barra--*/
 }
-.col-100 {
+
+.col-100 { /*-- index--*/
     width: 100%;
     position: relative;
     float: left;
-    background: #f7e7e6;  /*-- brinquem com as cores--*/
+    background: #ffffff;
+    font-family: 'Lato', sans-serif;       
 }
+
+.col-100-2 { /*-- para as camisetas--*/ 
+    width: 100%;
+    background: #f7e7e6;  /*-- brinquem com as cores--*/    
+    max-height: auto; /*-- altura--*/    
+    background-color:#EEE;
+    font-family:'Lato', Helvetica, Arial;
+    font-size:.9375rem;
+    display:flex;
+    margin:0;
+    min-height:100vh;
+    padding: 1.25rem;
+}
+
+.col-100-3 { /*-- para o login--*/
+    background-image: url(https://i.imgur.com/K8lDBYU.jpg); 
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50rem;
+    font-family:'Hepta Slab', Helvetica, Arial;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed
+}   
+ 
+    /*--carrosel--*/
+
 button.slick-prev {
-    font-size: 0px; /*--setas--*/
+    font-size: 0rem; /*--setas--*/
     border: none;
-    width: 56px;
-    height: 70px;
+    width: 3.5rem;
+    height: 4.375rem;
     z-index: 9;
     background-color: transparent;
     position: absolute;
@@ -88,11 +204,12 @@ button.slick-prev {
     top: 35%;
     left: 20%;
 }
+
 button.slick-next {
-    font-size: 0px; /*--setas--*/
+    font-size: 0rem; /*--setas--*/
     border: none;
-    width: 56px;
-    height: 70px;
+    width: 3.5rem;
+    height: 4.375rem;
     z-index: 9;
     background-color: transparent;
     position: absolute;
@@ -100,166 +217,1202 @@ button.slick-next {
     top: 35%;
     right: 20%;
 }
+
 .slick-list {
     width: 100%!important;
 }
- .slick-initialized{
+
+.slick-initialized {
      overflow: hidden;
- }
- .slick-dots li button {
-     font-size: 0px;
-     border: 5px solid #ff2033; /*--cor externo botao--*/
-     width: 26px;
-     height: 26px;
-     background: transparent;
-     border-radius: 50%;
-     cursor: pointer;
- }
- .slick-dots {
-     margin: 0 auto;
-     width: 50%;
-     position: absolute;
-     left: 41%;
-     top: 560px;
- }
-li.slick-active button{
+}
+
+.slick-dots li button {
+    font-size: 0rem;
+    border: .3125rem solid #ff2033; /*--cor externo botao--*/
+    width: 1.625rem;
+    height: 1.625rem;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slick-dots {
+    margin: 0 auto;
+    width: 50%;
+    position: absolute;
+    left: 41%;
+    top: 35rem;
+}
+
+li.slick-active button {
     background: #000000;
 }
- .slick-dots li {
-     padding-left: 10px;
+
+.slick-dots li {
+     padding-left: .625rem;
      display: inline-block;
 }
+    /*--carrosel--*/
+
+
 .whatsapp {
     position:fixed;
-    width:60px;
-    height:60px;
-    bottom:30px;
-    right:110px;
+    width:3.75rem;
+    height:3.75rem;
+    bottom:1.875rem;
+    right:6.875rem;
     text-align:center;
-    font-size:40px;
+    font-size:2.5rem;
     z-index:1000;
     list-style: none;
 }
-.texto-destaque{
+
+.texto-destaque {
     text-align: center;
 }
+
 .texto-destaque h1 {
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 1.875rem;
     color:#000000;
+    font-family:'Hepta Slab', Helvetica, Arial!important; 
 }
-.texto-destaque strong{
+
+.texto-destaque strong {
     color: #e32636;
 }
+
 .texto-destaque p {
-    font-size: 20px;
+    font-size: 1.125rem;
     color:#000000;
 }
+
 .col-3 {
     text-align: center;
     padding-left: 15;
-    padding-right: 15px;
+    padding-right: .9375rem;
     width: 29%;
     float: left;
     position: relative;
 }
+
 .bloco-imagem img {
     margin: 0 auto;
     width: 70%;   
     height: auto;
 }
+
 .bloco-imagem {
-    height: 320px; /*--tamanho dos quadrados inicios--*/
-    border: 1px solid #c5c5c5;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin-left: 10px;
+    height: 31.25rem; /*--para caber mais contexto --*/
+    border: .0625rem solid #c5c5c5;
+    padding-top: .9375rem;
+    padding-bottom: .9375rem;
+    margin-left: .625rem;
 }
+
 .bloco-imagem b, p {
     text-align: center;
+    margin-left: 3%;
 }
+
 .bloco-texto {
     margin-top: 2em;
+    margin-left: 2.1875rem /*--espaçamento bloco 3  --*/
 }
+
+.bloco-texto img {
+    width: 15.625rem; /*--tamanho das 3 imgs inicio  --*/
+    height: 10rem;
+} 
+
 h3 {
-    font-weight: normal!important;
+    font-weight: bold;
+    font-family:'Hepta Slab', Helvetica, Arial!important; 
 }
-.bloco-imagens-texto {
-    background-color: #f7e7e6; /*-- brinquem com as cores--*/
-}
+
 .bloco-imagens-texto::before { /*-- 6 banner inicio config--*/
     width: 100%;
     display: inline-block;
     content: '';
-    height: 52px;
-    background: #4a514d;
+    height: 3.25rem;
+    background: linear-gradient( #4a514d, #ff0000 );
+    background: #423d3d;
     background-image: url('../img/setinha.png');
     background-repeat: no-repeat;
     background-position: center;
+    font-family: 'Lato', sans-serif;
 }
+    /*-- rodape--*/
 .bloco-imagens-texto:after {
     width: 100%;
     display: inline-block;
     content: '';
-    height: 70px;
-    background: #f7e7e6; /*-- brinquem com as cores--*/
+    height: 4.375rem;
+    background: #f3f0f0;
 }
-.col-4{  /*-- rodape--*/
+
+.col-4 {
     float: left;
     width: 25%;
-    text-align: center;
+    text-decoration: none;
+    list-style: none;
+    
 }
-.col-4 img{
+
+.col-4 img {
     cursor: pointer;
     margin: 0 auto;
     padding-top: 1em;
     vertical-align: middle;
 }
-.col-4 img:hover{
-    margin-top: 10px!important;
+
+.col-4 img:hover {
+    margin-top: .625rem!important;
     position: relative!important;
-    transform: scale(1,2); /*-- esticar rodape img--*/
 }
+
 .bloco-logos {
-    height: 170px; /*-- aumentar depois para o mercado livre--*/
+    height: 10.625rem; /*-- aumentar depois para o mercado livre--*/
 }
+
 .bloco-logos img {
-    margin-top: 50px;
+    margin-top: 3.125rem;
 }
-.footer h3 { /*-- rodape--*/
+
+    /*-- rodape--*/
+.footer h3 { 
+    font-weight: normal!important;
     text-align: left;
 }
+
 .footer {
     background-image: url('../img/rodape.png');
     color: #ffffff;
 }
+
 .footer-2 {
     background-image: url('../img/rodape2.png');
     color: #ffffff;
-    height:89px;
+    height:5.5625rem;
 }
+
 .footer p {
-    width: 81%; /*-- largura dos textos rodape psv aumento ft--*/
+    width: 82%; /*-- largura dos textos rodape psv aumento ft--*/
     text-align: left;
 }
+
 .footer-2 p {
-    padding: 10px;
+    padding: .625rem;
 }
+
 .local:before, .email:before, .telefone:before { /*-- chamando os 3--*/
     content:'';
-    width: 23px;
-    height: 23px;
+    width: 1.125rem;
+    height: 1rem;
     display: inline-block;
-    float: left;
     background-repeat: no-repeat;
-    padding-left: 5px;
+    padding-left: .3125rem;
 }
+
 .local:before {
     background-image: url('../img/local.png');
 }
+
 .email:before {
     background-image: url('../img/email.png');
 }
+
 .telefone:before {
     background-image: url('../img/telefone.png');
 }
+
+    /*-- rodape--*/
+
+    /*-- updates--*/
+::-webkit-scrollbar {
+    width: .75rem;
+    border: .0625rem solid rgb(200, 200, 200);
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+    border-radius: 1.875rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient( #e46b75, #ff0000 );
+    border-radius: 1.875rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(#796060, #791212 );
+}
+
+
+    /*-- updates--*/
+
+    /*-- responsive--*/
+@media (max-width:20rem){
+    .logo {
+        margin-left: 5%;
+    }
+    .redes-sociais {
+        margin-left: 1%;
+        margin-top: 1.125rem;
+    }
+    
+    .busca {
+        margin-top: 4.5625rem;
+        margin-right: 30%;
+    }
+    
+    .busca input {
+        width: 16.75rem;
+    }
+
+    .texto-destaque h3 {
+        margin-right: 73%;
+    }
+
+    .texto-destaque h1 {
+        width: 26%;
+        margin-left: 4%;
+    }
+
+    .texto-destaque p {
+        width: 21%;
+    }
+
+    .content-mobile p {
+        width: 28%;
+    }
+
+    .bloco-texto {
+        width: 100%;
+    }
+
+    .col-100 {
+        width: 100%;
+    }
+
+    .content-mobile-1 {
+        width: 0%;
+
+    }
+
+    .content-mobile-1 p {
+        width: 21%;
+        border: none;
+
+    }
+
+    .bloco-texto img{
+        margin-right: 73%;
+    }
+
+    .bloco-imagem {
+        border: none;
+        height: 34.375rem;
+    }
+    
+    .bloco-logos img {
+    display: flex;
+    flex-direction: column;
+    margin-left: -9%;
+    }
+    
+    .bloco-logos {
+    height: 33.5625rem;
+    
+    }
+    
+    .content-1 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20%;
+    }
+    .footer-2 p {
+        padding: 0%;
+    }
+    
+    .content-mobile-3 p {
+        width: 25%;
+    }
+
+    .whatsapp {
+        margin-right: 45%;
+        height: 1.875rem;
+    }
+    
+    .whatsapp img {
+        width: 2.1875rem;
+    }
+
+	#navbar ul li{
+		display: block;
+	}
+
+	#navbar ul li:hover ul{
+		width: 100%;
+		position: relative ;
+	}
+
+    .whatsapp {
+        margin-right: 45%;
+        height: 14.125rem;
+    }
+
+    .whatsapp img {
+        width: 70%;
+    }
+
+    .slick-slide {
+        height: 12.5rem !important;
+    }
+
+    button.slick-prev, button.slick-next  {
+        background-size: 2.5rem;
+        height: 2.5rem;
+        width: 2.5rem;
+
+    }
+
+}
+
+@media (min-width:20.0625rem) and (max-width: 28.5rem){
+    .logo {
+        margin-left: 5%;
+    }
+    .redes-sociais {
+        margin-left: 1%;
+        margin-top: 1.125rem;
+        width: 100%;
+    }
+    
+    .busca {
+        margin-top: 4.5625rem;
+        margin-right: 30%;
+    }
+    .texto-destaque h3 {
+        margin-right: 69%;
+    }
+
+    .texto-destaque h1 {
+        width: 37%;
+    }
+
+    .texto-destaque p {
+        width: 32%;
+        margin-left: -1%;
+    }
+
+    .content-mobile p {
+        width: 33%;
+        margin-left: 2%;
+    }
+
+    .bloco-texto {
+        width: 100%;
+    }
+
+    .col-100 {
+        width: 100%;
+    }
+
+    .content-mobile-1 {
+        width: 0%;
+
+    }
+
+    .content-mobile-1 p {
+        width: 32%;
+        border: none;
+
+    }
+
+    .bloco-texto img{
+        margin-right: 69%;
+    }
+
+    .bloco-imagem {
+        border: none;
+    }
+    
+    .bloco-logos img {
+    display: flex;
+    flex-direction: column;
+    margin-left: -9%;
+    }
+    
+    .bloco-logos {
+    height: 33.5625rem;
+    
+    }
+    
+    .content-1 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 29%;
+    }
+    .footer-2 p {
+        padding: 0%;
+    }
+    
+    .content-mobile-3 p {
+        width: 36%;
+    }
+
+    .whatsapp {
+        margin-right: 45%;
+        height: 1.875rem;
+    }
+    
+    .whatsapp img {
+        width: 2.1875rem;
+    }
+
+	#navbar ul li{
+		display: block;
+	}
+
+	#navbar ul li:hover ul{
+		width: 100%;
+		position: relative ;
+	}
+
+    .whatsapp {
+        margin-right: -29%;
+        height: 10.75rem;
+    }
+
+    .whatsapp img {
+        width: 80%;
+    }
+    
+    .slick-slide {
+        height: 16.25rem !important;
+    }
+
+    button.slick-prev, button.slick-next  {
+        background-size: 2.5rem;
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    .bloco-imagem b, p {
+        text-align: center;
+        margin-left: 0%;
+    }
+
+}
+
+@media (min-width:28.5rem) and (max-width: 32.0625rem){
+    .logo {
+        margin-left: 15%;
+    }
+    .redes-sociais {
+        margin-left: 7%;
+        margin-top: 1.125rem;
+        width: 100%;
+    }
+    
+    .busca {
+        margin-top: 4.5625rem;
+        margin-right: 24%;
+    }
+    .texto-destaque h3 {
+        margin-right: 20%;
+    }
+
+    .texto-destaque h1 {
+        width: 45%;
+    }
+
+    .texto-destaque p {
+        width: 85%;
+    }
+
+    .content-mobile p {
+        width: 45%;
+    }
+
+    .bloco-texto {
+        width: 48%;
+    }
+
+    .col-100 {
+        width: 100%;
+    }
+
+    .content-mobile-1 {
+        width: 0%;
+
+    }
+
+    .content-mobile-1 p {
+        width: 80%;
+        border: none;
+
+    }
+
+    .bloco-texto img{
+        margin-right: 20%;
+        width: 60%;
+    }
+
+    .bloco-imagem {
+        border: none;
+    }
+    
+    .bloco-logos img {
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .bloco-logos {
+    height: 33.5625rem;
+    
+    }
+    
+    .content-1 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 25%;
+    }
+    .footer-2 p {
+        padding: 0%;
+    }
+    
+    .content-mobile-3 p {
+        width: 39%;
+        margin-left: 3%;
+    }
+    
+
+    .whatsapp {
+        margin-right: -18%;
+        height: 3.4375rem;
+    }
+
+    .whatsapp img {
+        width: 80%;
+    }
+
+	#navbar ul li{
+		display: block;
+	}
+
+	#navbar ul li:hover ul{
+		width: 100%;
+		position: relative ;
+	}
+
+    .slick-slide {
+        height: 16.25rem !important;
+    }
+
+    button.slick-prev, button.slick-next  {
+        background-size: 2.5rem;
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+ 
+}
+
+@media (min-width:32.125rem) and (max-width: 38.3125rem){
+    .logo {
+        margin-left: 15%;
+    }
+    .redes-sociais {
+        margin-left: 7%;
+        margin-top: 1.125rem;
+        width: 100%;
+    }
+    
+    .busca {
+        margin-top: 4.5625rem;
+        margin-right: 24%;
+    }
+    .texto-destaque h3 {
+        margin-right: 10%;
+    }
+
+    .texto-destaque h1 {
+        width: 49%;
+        margin-left: 2%;
+    }
+
+    .texto-destaque p {
+        width: 100%;
+    }
+
+    .content-mobile p {
+        width: 50%;
+    }
+
+    .bloco-texto {
+        width: 48%;
+    }
+
+    .col-100 {
+        width: 100%;
+    }
+
+    .content-mobile-1 {
+        width: 0%;
+
+    }
+
+    .content-mobile-1 p {
+        width: 100%;
+        border: none;
+
+    }
+
+    .bloco-texto img{
+        margin-right: 0%;
+        width: 75%;
+    }
+
+    .bloco-imagem {
+        border: none;
+    }
+    
+    .bloco-logos img {
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .bloco-logos {
+    height: 33.5625rem;
+    
+    }
+    
+    .content-1 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 25%;
+    }
+    .footer-2 p {
+        padding: 0%;
+    }
+    
+    .content-mobile-3 p {
+        width: 48%;
+        margin-left: 3%;
+    }
+    
+
+    .whatsapp {
+        margin-right: -18%;
+        height: 3.4375rem;
+    }
+
+    .whatsapp img {
+        width: 80%;
+    }
+
+	#navbar ul li{
+		display: block;
+	}
+
+	#navbar ul li:hover ul{
+		width: 100%;
+		position: relative ;
+	}
+
+    .bloco-imagens-texto::before {
+        background-image: none;
+    }
+
+    .slick-slide {
+        height: 17.1875rem !important;
+    }
+
+    button.slick-prev, button.slick-next  {
+        background-size: 3.4375rem;
+        height: 3.4375rem;
+        width: 2.8125rem;
+    }
+
+}
+
+@media (min-width:38.375rem) and (max-width: 46.875rem){
+    .logo {
+        margin-left: 27%;
+    }
+    .redes-sociais {
+        margin-left: 19%;
+        margin-top: 1.125rem;
+        width: 100%;
+    }
+    
+    .busca {
+        margin-top: 4.5625rem;
+        margin-right: 11%;
+    }
+    .texto-destaque h3 {
+        margin-right: -7%;
+    }
+
+    .texto-destaque h1 {
+        width: 53%;
+        margin-left: 3%;
+    }
+
+    .texto-destaque p {
+        width: 100%;
+    }
+
+    .content-mobile p {
+        width: 49%;
+    }
+
+    .bloco-texto {
+        width: 56%;
+    }
+
+    .col-100 {
+        width: 100%;
+    }
+
+    .content-mobile-1 {
+        width: 0%;
+
+    }
+
+    .content-mobile-1 p {
+        width: 100%;
+        border: none;
+        font-size: 1.125rem;
+    }
+
+    .bloco-texto img{
+        margin-right: -5%;
+        width: 75%;
+    }
+
+    .bloco-imagem {
+        border: none;
+    }
+    
+    .bloco-logos img {
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .bloco-logos {
+    height: 33.5625rem;
+    
+    }
+    
+    .content-1 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10%;
+        width: 129.6875rem;
+        font-size: 1.125rem;
+    }
+    .footer-2 p {
+        padding: 0%;
+    }
+    
+    .content-mobile-3 p {
+        width: 66%;
+        margin-left: 0%;
+    }
+
+    .whatsapp {
+        height: 7.8125rem;
+    }
+
+    .whatsapp img {
+        width: 100%;
+    }
+
+	#navbar ul li{
+		display: block;
+	}
+	
+    #navbar ul li:hover ul{
+		width: 100%;
+		position: relative ;
+	}
+    
+    .bloco-imagens-texto::before {
+        background-image: none;
+    }
+
+    .slick-slide {
+        height: 19.6875rem !important;
+    }
+
+    button.slick-prev, button.slick-next  {
+        background-size: 4.0625rem;
+        height: 4.0625rem;
+        width: 3.4375rem;
+    }
+
+}
+
+@media (min-width:46.9375rem) and (max-width: 53.125rem){
+    .logo {
+        margin-left: 27%;
+    }
+    .redes-sociais {
+        margin-left: 19%;
+        margin-top: 1.125rem;
+        width: 100%;
+    }
+    
+    .busca {
+        margin-top: 4.5625rem;
+        margin-right: 11%;
+    }
+    .texto-destaque h3 {
+        margin-right: -30%;
+    }
+
+    .texto-destaque h1 {
+        width: 75%;
+        margin-left: 0%;
+    }
+
+    .texto-destaque p {
+        width: 125%;
+    }
+
+    .content-mobile p {
+        width: 68%;
+    }
+
+    .bloco-texto {
+        width: 56%;
+    }
+
+    .col-100 {
+        width: 100%;
+    }
+
+    .content-mobile-1 {
+        width: 0%;
+
+    }
+
+    .content-mobile-1 p {
+        width: 100%;
+        border: none;
+        font-size: 1.125rem;
+    }
+
+    .bloco-texto img{
+        margin-right: -25%;
+        width: 75%;
+    }
+
+    .bloco-imagem {
+        border: none;
+    }
+    
+    .bloco-logos img {
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .bloco-logos {
+    height: 33.5625rem;
+    }
+    
+    .content-1 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10%;
+        width: 129.6875rem;
+        font-size: 1.125rem;
+    }
+    .footer-2 p {
+        padding: 0%;
+    }
+    
+    .content-mobile-3 p {
+        width: 81%;
+        margin-left: 1%;
+    }
+    
+    .whatsapp {
+        margin-right: -10%;
+        height: 6.9375rem;
+    }
+
+    .whatsapp img {
+        width: 100%;
+    }
+
+	#navbar ul li{
+		display: block;
+	}
+	#navbar ul li:hover ul{
+		width: 100%;
+		position: relative ;
+	}
+    .bloco-imagens-texto::before {
+        background-image: none;
+    }
+
+    .slick-slide {
+        height: 22.5rem !important;
+    }
+
+    button.slick-prev, button.slick-next  {
+        background-size: 4.0625rem;
+        height: 4.0625rem;
+        width: 3.4375rem;
+    }
+    
+}
+
+@media (min-width:53.1875rem) and (max-width: 59.375rem){
+    .logo {
+        margin-left: 15%;
+    }
+    .redes-sociais {
+        margin-left: 45%;
+        margin-top: -4.25rem;
+        width: 100%;
+    }
+    
+    .busca {
+        margin-top: 3.5625rem;
+        margin-right: 5%;
+    }
+    .texto-destaque h3 {
+        margin-right: -30%;
+    }
+
+    .texto-destaque h1 {
+        width: 75%;
+        margin-left: 0%;
+    }
+
+    .texto-destaque p {
+        width: 125%;
+    }
+
+    .content-mobile p {
+        width: 68%;
+    }
+
+    .bloco-texto {
+        width: 56%;
+    }
+
+    .col-100 {
+        width: 100%;
+    }
+
+    .content-mobile-1 {
+        width: 35%;
+
+    }
+
+    .content-mobile-1 p {
+        width: 100%;
+        border: none;
+        font-size: 1.125rem;
+    }
+
+    .bloco-texto img{
+        margin-right: -25%;
+        width: 75%;
+    }
+
+    .bloco-imagem {
+        border: none;
+    }
+    
+    .bloco-logos img {
+    display: flex;
+    flex-direction: column;
+    }
+    
+    
+    .content-1 {
+        margin-left: 10%;
+        width: 45.25rem;
+    }
+    .footer-2 p {
+        padding: 0%;
+    }
+    
+    .content-mobile-3 p {
+        width: 85%;
+        margin-left: 1%;
+    }
+    
+
+    .whatsapp {
+        margin-right: -10%;
+        height: 6.9375rem;
+    }
+
+    .whatsapp img {
+        width: 100%;
+    }
+
+    .bloco-imagens-texto::before {
+        background-image: none;
+    }
+
+    .slick-slide {
+        height: 28.125rem !important;
+    }
+
+    button.slick-prev, button.slick-next  {
+        background-size: 4.0625rem;
+        height: 4.0625rem;
+        width: 3.4375rem;
+    }
+
+}
+
+@media (min-width:59.4375rem) and (max-width: 65.625rem){
+    .logo {
+        margin-left: 2%;
+        width: 65%;
+    }
+
+    .texto-destaque h3 {
+        margin-right: -30%;
+    }
+
+    .texto-destaque h1 {
+        width: 75%;
+        margin-left: 0%;
+    }
+
+    .texto-destaque p {
+        width: 125%;
+    }
+
+    .content-mobile p {
+        width: 68%;
+    }
+
+    .bloco-texto {
+        width: 56%;
+    }
+
+    .col-100 {
+        width: 100%;
+    }
+
+    .content-mobile-1 {
+        width: 35%;
+
+    }
+
+    .content-mobile-1 p {
+        width: 100%;
+        border: none;
+        font-size: 1.125rem;
+    }
+
+    .bloco-texto img{
+        margin-right: -25%;
+        width: 75%;
+    }
+
+    .bloco-imagem {
+        border: none;
+    }
+    
+    .bloco-logos img {
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .content-1 {
+        margin-left: 10%;
+        width: 45.25rem;
+    }
+
+    .footer-2 p {
+        padding: 0%;
+    }
+    
+    .content-mobile-3 p {
+        width: 81%;
+        margin-left: -3%;
+    }
+    
+
+    .whatsapp {
+        margin-right: -10%;
+        height: 6.9375rem;
+    }
+
+    .bloco-imagens-texto::before {
+        background-image: none;
+    }
+    
+}
+
+@media (min-width:65.625rem) and (max-width: 71.875rem){
+    .content-mobile-1 {
+        width: 2%;
+
+    }
+
+    .content-mobile-1 p {
+        width: 100%;
+        border: none;
+        font-size: 1.125rem;
+    }
+
+    .bloco-texto img{
+        width: 95%;
+    }
+
+    .bloco-imagem {
+        height: 31.375rem;
+    }
+    
+
+}
+
+@media (min-width:71.9375rem) and (max-width: 78.125rem){
+    .content-mobile-1 {
+        width: 40%;
+
+    }
+
+    .content-mobile-1 p {
+        width: 100%;
+        border: none;
+        font-size: 1.125rem;
+    }
+
+    .bloco-imagem {
+        height: 31.375rem;
+    }
+    
+}
+
+@media (min-width:78.1875rem) and (max-width: 84.375rem){
+    .content-mobile-1 {
+        width: 40%;
+
+    }
+
+    .content-mobile-1 p {
+        width: 100%;
+        border: none;
+        font-size: 1.125rem;
+    }
+
+    .bloco-imagem {
+        height: 31.375rem;
+    }
+    
+}
+/*-- responsive--*/

@@ -87,7 +87,6 @@
     float: right;
 }
 .slick-slide img {
-    height: 600px; /*--altura inicio logos--*/
     display: block;
 }
 .slick-slide.slick-loading img

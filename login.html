@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=10, minimum-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="./css/main.css" />
+        <title>Login</title>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Hepta+Slab:400,700|Lato:400,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/login.css">
+
+            <style>
+                *{
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+            </style>
+    </head>
+
+    <body>
+        <header class="menu-principal">
+            <main>
+                <div class="header-1">
+                    <div class="logo">
+                        <a href="index.html"><img src="./img/banner.png" /></a>
+                    </div>
+
+                    <div class="redes-sociais">
+                        <ul-1>
+                            <li style="--clr: #1877f2;">
+                                <a href="https://www.facebook.com/Loja-GeekUni-102115192408274"><i class="fa-brands fa-facebook-f"></i> </a>
+                            </li>
+                            <li style="--clr: #c32aa3;">
+                                <a href="https://www.instagram.com/lojageek.uni/"><i class="fa-brands fa-instagram"></i></a>
+                            </li>
+                            <li style="--clr: #1da1f2;">
+                                <a href="https://twitter.com/LojaGeek_uni"><i class="fa-brands fa-twitter"></i></a>
+                            </li>
+                            <li style="--clr: #EE1D52;">
+                                <a href="https://www.tiktok.com/@lojageekuni9?lang=pt-BR"><i class="fa-brands fa-tiktok"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="busca">
+                    <input placeholder="Buscar" type colo="text" />
+                </div>
+            </main>
+        </header>
+        <main class="col-100 menu-urls">
+            <div class="header-2">
+                <nav id="navbar">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="login.html">Minha Conta</a></li>
+                        <li>Produtos <i class="fas fa-angle-down"></i>
+                            <ul>
+                                <li><a href="camisetas.html">Camisetas</a></li>
+                                <li><a href="#">Manga</a></li> <!--nao pronta-->
+                                <li><a href="#">Decoraçao</a></li> <!--nao pronta-->
+                                <li><a href="#">Canecas</a></li> <!--nao pronta-->
+                                <li><a href="#">Colecionaveis</a></li> <!--nao pronta-->
+                                <li><a href="#">Placas e Quadros</a></li> <!--nao pronta-->
+                                <li><a href="#">Jogos de mesa</a></li> <!--nao pronta-->
+                            </ul>
+                        </li>
+            
+                        <li>Blog <i class="fas fa-angle-down"></i>
+                            <ul>
+                                <li><a href="#">Animes e series </a><span>22 Posts</span></li><!--nao pronta-->
+                                <li><a href="#">Games </a><span>10 Posts</span></li><!--nao pronta-->
+                                <li><a href="#">Tecnologia </a><span>16 Posts</span></li><!--nao pronta-->
+                                <li><a href="#">Cinema </a><span>23 Posts</span></li><!--nao pronta-->
+                                <li><a href="#">Curiosidades </a><span>13 Posts</span></li><!--nao pronta-->
+                                <li><a href="#">Reviews </a><span>44 Posts</span></li><!--nao pronta-->
+                            </ul>
+                        </li>
+                        <li><a href="#">Suporte</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </main>
+        
+        <div class="col-100-3">
+            <div class='container'>
+                <div class='card'>
+                  <h1> Entrar </h1>
+                  
+                  <div id='msgError'></div>
+                  
+                  <div class='label-float'>
+                    <input type='text' id='usuario' paceholder='' required>
+                    <label id='userLabel' for='usuario'>Usuario</label>
+                  </div>
+                  
+                  <div class='label-float'>
+                    <input type='password' id='senha' paceholder='' required>
+                    <label id='senhaLabel' for='senha'>Senha</label>
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                  </div>
+                  
+                  <div class='justify-center'>
+                    <button onclick='entrar()'>Entrar</button>
+                  </div>
+                  
+                  <div class='justify-center'>
+                    <hr>
+                  </div>
+                  
+                  <p> Não tem uma conta?
+                    <a href='cadastro.html'> Cadastre-se </a>
+                  </p>
+                  
+                </div>              
+            </div>
+        </div>
+        
+        <footer>
+            <div class="col-100 footer">
+                <div class="content-1">
+                    
+                    <div class="col-4">
+                        <h3><b>Nossa meta</b></h3>
+                        <p>O Setor Geek nasceu com o objetivo de se tornar a maior comunidade de comércio geek do Brasil. Sabemos que para chegar nesse resultado precisamos oferecer aos nossos clientes um atendimento de qualidade, segurança nas negociações e preços abaixo dos praticados pelo mercado.
+                        </p>
+                    </div>
+                    
+                    <div class="col-4">
+                        <h3><b>Fundadores</b></h3>
+                        <a href="https://www.instagram.com/douglas6gama/">
+                            <p>@douglas6gama<br></a>
+                        <a href="https://www.instagram.com/felipees10/">
+                            <p>@felipees10<br></a>
+                        <a href="https://www.instagram.com/jucosta.y/">
+                            <p>@jucosta.y<br></a>
+                        <a href="https://www.instagram.com/iitalo.paiva/">
+                            <p>@iitalo.paivaa<br></a>
+                        <a href="https://www.instagram.com/dantash_/">
+                            <p>@dantash_<br></a>
+                        <a href="https://www.instagram.com/kaique33321/">
+                            <p>@kaique33321<br></a>
+                        <a href="https://www.instagram.com/gui_vaca/">
+                            <p>@gui_vaca<br></a>                      
+                        <a href="https://www.instagram.com/_wellington_araujo/">
+                            <p>@_wellington_araujo<br></a>
+                    </div>
+                    
+                    <div class="col-4">
+                        <h3><b>Produtos</b></h3>
+                        <p>
+                            <li><a href="camisetas.html">Camisetas</a></li>
+                            Manga<br>
+                            Decoraçao<br>
+                            Canecas <br>
+                            Colecionaveis<br>
+                            Placas e Quadros<br>
+                            Jogos de mesa <br>
+                        </p>
+                    </div>
+                    
+                    <div class="col-4">
+                        <h3><b>Loja fisica</b></h3>
+                        <p>
+                            EM BREVE <br>
+                            <br>
+                            Horário de atendimento:
+                            <br>
+                            Seg à Sex das 9:00h às 17:30h
+                            
+                        </p>
+                        <a href="https://www.google.com/maps?q=uninove+vila+prudente&rlz=1C1FCXM_pt-PTBR974BR974&um=1&ie=UTF-8&sa=X&ved=2ahUKEwiqjbTa5573AhUqrpUCHT0qAoUQ_AUoAXoECAIQAw">
+                        <p class="local">Vila Prudente, SP</p></a>
+                        <p class="email">lojageek.uni@gmail.com</p>
+                        <a href="https://api.whatsapp.com/send?phone=5511941104068&text=Oi,%20me%20tira%20algumas%20dúvidas%20sobre%20como%20comprar%20no%20Setor Geek?">
+                        <p class="telefone">11-94110-4068</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <div class="col-100 footer-2">
+           
+            <div class="content-mobile-3">
+                
+                <div class="content">
+                    <p>
+                        © 2022-2022 Proibida a reprodução sem autorização. SETOR GEEK PRODUTOS COMERCIO DE VESTUARIO E ACESSORIOS LTDA | CNPJ: 29.428.420/0001-55 |
+                        <a href="https://www.google.com/maps?q=uninove+vila+prudente&rlz=1C1FCXM_pt-PTBR974BR974&um=1&ie=UTF-8&sa=X&ved=2ahUKEwiqjbTa5573AhUqrpUCHT0qAoUQ_AUoAXoECAIQAw">
+                            Av. Professor Luiz Ignácio Anhaia Mello, 1363 - Vila Prudente, São Paulo - SP, CEP 03155-000</a> 
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="whatsapp">
+            <li><a
+                    href="https://api.whatsapp.com/send?phone=5511941104068&text=Oi,%20me%20tira%20algumas%20dúvidas%20sobre%20como%20comprar%20no%20Setor Geek?">
+                    <img src="./img/whatsapp.png" /></a></li>
+        </div>
+
+        <script type="text/javascript" src="./js/usuarioinicio.js"></script>
+        <script type="text/javascript" src="./js/login.js"></script>
+        <script type="text/javascript" src="./js/cadastro.js"></script>
+    
+    </body>
+
+</html>
