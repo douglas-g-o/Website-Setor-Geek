@@ -188,7 +188,15 @@ main, .content, .content-1 { /*--barra do topo junto com o banner para mexer pos
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed
-}   
+}
+
+.col-100-4 {
+    background:linear-gradient(90deg,#000000 -10%, #b12222 30%, #b82121 30%,#000000 120%);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-family: 'Hepta Slab', Helvetica, Arial;
+}
  
     /*--carrosel--*/
 
