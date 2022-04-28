@@ -1,228 +1,216 @@
-.contactUs
-{
-  padding: 2.5rem 6.25rem;
+.contactUs {
+    padding: 2.5rem 6.25rem;
 }
-.contactUs .title
-{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2em;
+
+.contactUs .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
 }
-.contactUs .title h2
-{
-  color: #fff;
-  font-weight: 500;
+
+.contactUs .title h2 {
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
 }
-.form
-{
-  grid-area:form;
+
+.form {
+    grid-area: form;
 }
-.info
-{
-  grid-area:info;
+
+.info {
+    grid-area: info;
 }
-.map
-{
-  grid-area:map;
+
+.map {
+    grid-area: map;
 }
-.contact
-{
-  padding: 2.5rem;
-  background: #fff;
-  box-shadow: 0 .3125rem 2.1875rem rgba(0,0,0,0.15);
+
+.contact {
+    padding: 2.5rem;
+    background: #fff;
+    box-shadow: 0 .3125rem 2.1875rem rgba(0, 0, 0, 0.15);
 }
-.box
-{
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 5fr 4fr;
-  grid-template-areas:
-  "form info"
-  "form map";
-  grid-gap: 1.25rem; 
-  margin-top: 1.25rem;
+
+.box {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 5fr 4fr;
+    grid-template-areas: "form info" "form map";
+    grid-gap: 1.25rem;
+    margin-top: 1.25rem;
 }
 
 .contact h3 {
-  color: #000000;
-  font-weight: 500;
-  font-size: 1.4em;
-  margin-bottom: .625rem;
+    color: #000000;
+    font-weight: 500;
+    font-size: 1.4em;
+    margin-bottom: .625rem;
 }
 
-
-
-.formBox .row50
-{
-  display: flex;
-  gap: 1.25rem;
-}
-.inputBox
-{
-  display: flex;
-  flex-direction: column;
-  margin-bottom: .625rem;
-  width: 50%;
-}
-.formBox .row100 .inputBox
-{
-  width: 100%;
-}
-.inputBox span
-{
-  color: #ff0000;
-  margin-top: .625rem;
-  margin-bottom: .3125rem;
-  font-weight: 500;
-}
-.inputBox input
-{
-  padding: .625rem;
-  font-size: 1.1em;
-  outline: none;
-  border: .0625rem solid #333;
-}
-.inputBox textarea
-{
-  padding: .625rem;
-  font-size: 1.1em;
-  outline: none;
-  border: .0625rem solid #333;
-  resize: none;
-  min-height: 13.75rem;
-  margin-bottom: .625rem;
+.formBox .row50 {
+    display: flex;
+    gap: 1.25rem;
 }
 
-.inputBox input[type="submit"]
-{
-  background: #ce0303;
-  color: #000000;
-  border: none;
-  font-size: 1.1em;
-  max-width: 7.5rem;
-  font-weight: 500;
-  cursor: pointer;
-  padding: .875rem .9375rem;
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .625rem;
+    width: 50%;
 }
 
-.inputBox ::placeholder
-{
-  color: #999;
+.formBox .row100 .inputBox {
+    width: 100%;
 }
 
-.info
-{
-  background: #7a4f4f;
+.inputBox span {
+    color: #ff0000;
+    margin-top: .625rem;
+    margin-bottom: .3125rem;
+    font-weight: 500;
 }
-.info h3
-{
-  color: #fff;
+
+.inputBox input {
+    padding: .625rem;
+    font-size: 1.1em;
+    outline: none;
+    border: .0625rem solid #333;
+    border-radius: 7px;
 }
-.info .infoBox div
-{
-  display:flex;
-  align-items: center;
-  margin-bottom: .625rem;
+
+.inputBox textarea {
+    padding: .625rem;
+    font-size: 1.1em;
+    outline: none;
+    border: .0625rem solid #333;
+    resize: none;
+    min-height: 13.75rem;
+    margin-bottom: .625rem;
+    border-radius: 7px;
 }
-.info .infoBox div span
-{
-  min-width: 2.5rem;
-  height: 2.5rem;
-  color: #fff;
-  background: #ff0000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5em;
-  border-radius: 50%;
-  margin-right:.9375rem;
+
+.inputBox input[type="submit"] {
+    background: #ce0303;
+    color: #ffff;
+    border: none;
+    font-size: 1.1em;
+    max-width: 7.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: .875rem .9375rem;
+}
+
+.inputBox ::placeholder {
+    color: #999;
+}
+
+.info {
+    background: #7a4f4f;
+}
+
+.info h3 {
+    color: #fff;
+}
+
+.info .infoBox div {
+    display: flex;
+    align-items: center;
+    margin-bottom: .625rem;
+}
+
+.info .infoBox div span {
+    min-width: 2.5rem;
+    height: 2.5rem;
+    color: #fff;
+    background: #ff0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 50%;
+    margin-right: .9375rem;
 }
 
 .infoBox div a {
-  color: #ce0303;
+    color: #fff;
+    text-shadow: 0.1em 0.1em 1.2em #ff2033;
 }
 
-.info .infoBox div p
-{
-  color: #fff;
-  font-size: 1.1em;
-}
-.info .infoBox div p
-{
-  color: #fff;
-  text-decoration: none;
-  font-size: .875rem;
-  text-align: left;
-  margin-left: 0%;
+.info .infoBox div p {
+    color: #fff;
+    font-size: 1.1em;
 }
 
+.info .infoBox div p {
+    color: #fff;
+    text-shadow: 0.1em 0.1em 1.2em #ff2033;
+    text-decoration: none;
+    font-size: .875rem;
+    text-align: left;
+    margin-left: 0%;
+}
 
-.sci
-{
-  margin-top: 2.5rem;
-  display:flex;
+.sci {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
 }
-.sci li
-{
-  list-style: none;
-  margin-right: .9375rem;
+
+.sci li {
+    list-style: none;
+    margin-right: .9375rem;
 }
-.sci li a
-{
-  color: #fff;
-  font-size: 2em;
-  color: #ccc;
+
+.sci li a {
+    color: #fff;
+    font-size: 2em;
 }
-.sci li a :hover
-{
-  color: #fff;
+
+.sci li a :hover {
+    transform: scale(1.2);
+    color: #ff0000;
 }
-.map
-{
-  padding: 0;
+
+.map {
+    padding: 0;
 }
-.map iframe
-{
-  width: 100%;
-  height: 100%;
+
+.map iframe {
+    width: 100%;
+    height: 100%;
 }
+
 
 /*Responsive */
 
-@media (max-width: 61.9375rem)
-{
+@media (max-width: 61.9375rem) {
     .col-100-4 {
-    background:linear-gradient(90deg,#000000 -10%, #b12222 30%, #b82121 30%,#000000 160%);
-  }
-  
-  .contactUs {
-    padding: 1.25rem;
-  }
-
-  .box {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .formBox .row50 {
-    display: flex;
-    gap: 0;
-    flex-direction: column;
-  }
-  
-  .inputBox {
-  width: 100%;
-  }
-  
-  .contact {
-  padding: 1.875rem;
-  }
-  
-  .map {
-  min-height: 18.75rem;
-  padding: 0rem;
-  }
-} 
+        background: linear-gradient(90deg, #000000 -10%, #b12222 30%, #b82121 30%, #000000 160%);
+    }
+    .contactUs {
+        padding: 1.25rem;
+    }
+    .box {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .formBox .row50 {
+        display: flex;
+        gap: 0;
+        flex-direction: column;
+    }
+    .inputBox {
+        width: 100%;
+    }
+    .contact {
+        padding: 1.875rem;
+    }
+    .map {
+        min-height: 18.75rem;
+        padding: 0rem;
+    }
+}
