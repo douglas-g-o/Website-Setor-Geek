@@ -11,13 +11,10 @@ body {
 }
 
 .menu-principal {
-    /*--barra do topo junto com o banner--*/
     width: 96%;
     background-color: #252323;
     height: 4.5rem;
-    /*--tamanho da faixa preta--*/
     margin-top: .625rem;
-    /*--update dia 29--*/
 }
 
 main,
@@ -32,7 +29,6 @@ main,
 .logo {
     float: left;
     width: 70%;
-    /*--mexer nas imagens rede sociais--*/
 }
 
 .redes-sociais {
@@ -56,7 +52,6 @@ main,
 
 #navbar {
     width: 95%;
-    /*--menu mais para direita--*/
 }
 
 #navbar ul {
@@ -66,12 +61,11 @@ main,
 #navbar ul li {
     color: #000;
     display: inline-block;
-    padding: 10px;
+    padding: .9375rem; /*--menor que 15 buga o menu--*/
     position: relative;
     text-transform: uppercase;
     /*--todas as letras maiusculo--*/
     font-weight: bold;
-    /*--deixar em negrito--*/
 }
 
 #navbar ul li a {
@@ -107,7 +101,6 @@ main,
 #navbar ul li:hover ul li {
     display: block;
     background: #000000;
-    /*--cor da barra submenu--*/
     min-height: 2rem;
     display: flex;
     flex-direction: column;
@@ -137,7 +130,7 @@ main,
 }
 
 #navbar a {
-    margin: 10px 25px 10px 25px;
+    margin: .625rem 1.5625rem .625rem 1.5625rem;
 }
 
 #showcase {
@@ -163,20 +156,15 @@ main,
     text-align: center;
     /*--retirar no futuro?--*/
     width: 68%;
-    /*--mexer menu direita esquerda--*/
     float: right;
     /*--retirar no futuro?--*/
 }
 
 .busca input {
     background-image: url('../img/lupa.png');
-    /*--img lupa--*/
     background-repeat: no-repeat;
-    /*--nao repetir lupa--*/
     background-position: 96%;
-    /*--lupa no canto--*/
     height: 2.25rem;
-    /*--tamanho da barra menu--*/
     padding: .75rem;
     width: 18.125rem;
     margin-top: -3.125rem;
@@ -202,9 +190,7 @@ main,
     /*-- para as camisetas--*/
     width: 100%;
     background: #f7e7e6;
-    /*-- brinquem com as cores--*/
     max-height: auto;
-    /*-- altura--*/
     background-color: #EEE;
     font-family: 'Lato', Helvetica, Arial;
     font-size: .9375rem;
@@ -228,6 +214,7 @@ main,
 }
 
 .col-100-4 {
+    /*-- para o suporte--*/
     background: linear-gradient(90deg, #000000 -10%, #b12222 30%, #b82121 30%, #000000 120%);
     display: flex;
     justify-content: center;
@@ -451,7 +438,7 @@ h3 {
 
 .footer-2 {
     background-color: #1a1919;
-    border: 2px solid #1a1919;
+    border: .125rem solid #1a1919;
     color: #ffffff;
     min-height: 6rem;
 }
