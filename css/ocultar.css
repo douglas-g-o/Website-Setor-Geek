@@ -177,7 +177,7 @@ h1 {
 }
 
 .modelsBig img {
-    height:25rem;
+    height:22rem;
     width:auto;
 }
 
@@ -202,6 +202,7 @@ h1 {
     font-size:.875rem;
     margin-top:1.875rem;
     margin-bottom:.625rem;
+    display: none;
 }
 
 .modelsInfo--sizes {
@@ -219,6 +220,7 @@ h1 {
     cursor:pointer;
     width: 6.9375rem; /*--update--*/
     text-align: center;
+    display: none;
 }
 
 .modelsInfo--size:hover {
