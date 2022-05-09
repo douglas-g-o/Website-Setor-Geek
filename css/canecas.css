@@ -86,7 +86,7 @@ h1 {
 }
 
 .models-item--img {
-    width: 12.5rem;
+    width: 14.5rem;
     height: 12.5rem;
     background-color: #EEE;
     border-radius: 1.25rem;
@@ -177,7 +177,7 @@ h1 {
 }
 
 .modelsBig img {
-    height:22rem;
+    height:20rem;
     width:auto;
 }
 
