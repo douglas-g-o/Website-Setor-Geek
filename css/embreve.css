@@ -2,12 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 html, body {
   min-height: 100vh;
   background: #ff0000;
   background: linear-gradient(90deg, #b12222 -20%, #000000 50%, #000000 30%, #b82121 130%);
+  overflow-x: hidden;
 }
 
 .container {
@@ -58,4 +61,11 @@ p {
   margin: .9375rem;
   justify-content: center;
 
+}
+
+@media (max-width:26rem) {
+
+  .item {
+    width: 19.9375rem;
+  }
 }

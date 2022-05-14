@@ -73,3 +73,15 @@ ul li:hover a {
     filter: drop-shadow(0 0 2.5rem var(--clr)) drop-shadow(0 0 3.75rem var(--clr)) drop-shadow(0 0 5rem var(--clr));
 }
 /*--redes sociais--*/
+
+@media (max-width:26rem) {
+    ul {
+        display: flex   ;
+        flex-direction: column;
+        margin-left: 7rem;
+    }
+
+    .fill {
+        margin-top: 40.9375rem;
+    }
+  }

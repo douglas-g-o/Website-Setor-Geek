@@ -576,15 +576,15 @@ h1 {
     .modelsInfo--sizes {
         flex-direction: column;
     }
+    
     .header-4 {
         width: 1.25rem;
     }
+
     .mobile-2 h1  {
         width: 25%;
     }
-    .models-area {
-        width: 25%;
-    }
+
     .models-item {
         max-width:70%;
     }

@@ -512,33 +512,36 @@ h3 {
 
 /*-- responsive--*/
 
-@media (max-width:20rem) {
+@media (max-width:26rem) {
     .logo {
-        margin-left: 5%;
+        margin-left: 11%;
     }
     .redes-sociais {
-        margin-left: 1%;
+        margin-left: 8%;
         margin-top: 1.125rem;
     }
     .busca {
         margin-top: 4.5625rem;
-        margin-right: 30%;
+        margin-right: 25%;
     }
     .busca input {
         width: 16.75rem;
     }
     .texto-destaque h3 {
-        margin-right: 73%;
+        margin-right: 63%;
     }
     .texto-destaque h1 {
         width: 26%;
-        margin-left: 4%;
+        margin-left: 8%;
     }
     .texto-destaque p {
-        width: 21%;
+        width: 26%;
+        margin-left: 48px;
     }
     .content-mobile p {
         width: 28%;
+        margin-left: 68px;
+
     }
     .bloco-texto {
         width: 100%;
@@ -550,15 +553,15 @@ h3 {
         width: 0%;
     }
     .content-mobile-1 p {
-        width: 21%;
+        width: 31%;
         border: none;
     }
     .bloco-texto img {
-        margin-right: 73%;
+        margin-right: 64%;
     }
     .bloco-imagem {
         border: none;
-        height: 34.375rem;
+        height: 27.375rem;
     }
     .bloco-logos img {
         display: flex;
@@ -577,7 +580,7 @@ h3 {
         padding: 0%;
     }
     .content-mobile-3 p {
-        width: 25%;
+        width: 35%;
     }
     .whatsapp {
         margin-right: 45%;
@@ -611,7 +614,7 @@ h3 {
     }
 }
 
-@media (min-width:20.0625rem) and (max-width: 28.5rem) {
+@media (min-width:26.1rem) and (max-width: 28.5rem) {
     .logo {
         margin-left: 5%;
     }

@@ -86,7 +86,7 @@ h1 {
 }
 
 .models-item--img {
-    width: 12.5rem;
+    width: 14.5rem;
     height: 12.5rem;
     background-color: #EEE;
     border-radius: 1.25rem;
@@ -177,7 +177,7 @@ h1 {
 }
 
 .modelsBig img {
-    height:25rem;
+    height:23rem;
     width:auto;
 }
 
@@ -200,7 +200,7 @@ h1 {
     color:rgb(243, 13, 13);
     text-transform: uppercase;
     font-size:.875rem;
-    margin-top:1.875rem;
+    margin-top: 0.875rem;
     margin-bottom:.625rem;
 }
 
@@ -219,6 +219,7 @@ h1 {
     cursor:pointer;
     width: 6.9375rem; /*--update--*/
     text-align: center;
+    display: none;
 }
 
 .modelsInfo--size:hover {
