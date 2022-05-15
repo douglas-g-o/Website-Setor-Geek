@@ -19,7 +19,8 @@ body {
 
 main,
 .content,
-.content-1 {
+.content-1,
+.content-2 {
     /*--barra do topo junto com o banner para mexer posição--*/
     margin: 0 auto;
     width: 61.25rem;
@@ -574,8 +575,15 @@ h3 {
     .content-1 {
         display: flex;
         flex-direction: column;
-        margin-left: 20%;
+        margin-left: 36%;
     }
+
+    .content-2 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 25%;
+    }
+
     .footer-2 p {
         padding: 0%;
     }
@@ -597,11 +605,11 @@ h3 {
         position: relative;
     }
     .whatsapp {
-        margin-right: 45%;
-        height: 14.125rem;
+        margin-right: 56%;
+        height: 5.125rem;
     }
     .whatsapp img {
-        width: 70%;
+        width: 75%;
     }
     .slick-slide {
         height: 12.5rem !important;
@@ -673,6 +681,13 @@ h3 {
         flex-direction: column;
         margin-left: 29%;
     }
+
+    .content-2 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20%;
+    }
+
     .footer-2 p {
         padding: 0%;
     }
@@ -773,6 +788,13 @@ h3 {
         flex-direction: column;
         margin-left: 25%;
     }
+
+    .content-2 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20%;
+    }
+
     .footer-2 p {
         padding: 0%;
     }
@@ -863,6 +885,13 @@ h3 {
         flex-direction: column;
         margin-left: 25%;
     }
+
+    .content-2 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20%;
+    }
+
     .footer-2 p {
         padding: 0%;
     }
@@ -959,6 +988,13 @@ h3 {
         width: 129.6875rem;
         font-size: 1.125rem;
     }
+
+    .content-2 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20%;
+    }
+
     .footer-2 p {
         padding: 0%;
     }
@@ -1054,6 +1090,13 @@ h3 {
         width: 129.6875rem;
         font-size: 1.125rem;
     }
+
+    .content-2 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20%;
+    }
+
     .footer-2 p {
         padding: 0%;
     }
@@ -1140,10 +1183,18 @@ h3 {
         display: flex;
         flex-direction: column;
     }
+
     .content-1 {
         margin-left: 10%;
         width: 45.25rem;
     }
+
+    .content-2 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20%;
+    }
+
     .footer-2 p {
         padding: 0%;
     }
@@ -1215,10 +1266,18 @@ h3 {
         display: flex;
         flex-direction: column;
     }
+
     .content-1 {
         margin-left: 10%;
         width: 45.25rem;
     }
+
+    .content-2 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20%;
+    }
+
     .footer-2 p {
         padding: 0%;
     }

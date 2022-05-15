@@ -561,9 +561,10 @@ h1 {
     }
     .mobile-2 h1  {
         width: 35%;
+        margin-left: 3.4375rem;
     }
     .models-area {
-        width: 35%;
+        width: 100%;
     }
     .models-item {
         max-width:80%;
