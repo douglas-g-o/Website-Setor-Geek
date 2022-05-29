@@ -8,4 +8,4 @@
 
  Disponivel em: https://setor-geek.web.app
 
-[img](https://github.com/douglas-g-o/Setor-Geek/issues/1)
+![img](https://user-images.githubusercontent.com/99775480/170895201-07615d77-0cd0-43d0-b3af-35588b77dcd6.jpg)
