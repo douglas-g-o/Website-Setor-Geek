@@ -46,14 +46,17 @@ h1, h2, p {
 
 h1 {
   color: #FFFFFF;
+  line-height: 1.5;
 }
 
 h2 {
   color: #FFFFFF;
+  line-height: 1.5;
 }
 
 p {
   color: #FFFFFF;
+  line-height: 1.5;
 }
 
 .social {

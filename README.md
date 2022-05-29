@@ -1,4 +1,9 @@
-# Setor-Geek
-Projeto de site completo envolvendo, pagina inicial, produtos, cadastro de conta, suporte e carrinho. Espero que nosso projeto possa te ajudar de alguma forma em seu site.
-No 1° semestre do curso de Análise de Desenvolvimento de Sistemas, da Universidade Nove de Julho, o professor Daniel passou aos alunos o projeto no qual o objetivo era construir um sistema WEB publicado em um provedor. A Loja Geek foi criada no segmento de vendas do Setor Geek. O projeto se iniciou em 12/02/2022 e foi entregue em 10/06/2022.
-Site do projeto: https://setor-geek.firebaseapp.com/index.html
+# 🤓 Setor-Geek
+<ul>
+    <li>O setor Geek é um site relacionando ao projeto do 1• semestre do curso de Análise de Desenvolvimento de Sistemas, da universidade Nobe de Julho.</li>
+    <li>Contem: Pagina inicial, minha conta, cadastro utilizando localstorage, 6 paginas de produtos diversos com sistema de adicionar ao carrinho, pagina em breve para aba Blog e finalizando com suporte.</li>
+    <li>Totalmente responsivo usando HTML, CSS e JavaScript.</li>
+    <li>Espero que nosso projeto possa te ajudar de alguma forma.</li>
+</ul>
+
+ Disponivel em: https://setor-geek.web.app

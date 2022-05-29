@@ -311,9 +311,10 @@ li.slick-active button {
 
 .texto-destaque h1 {
     text-transform: uppercase;
-    font-size: 1.875rem;
+    font-size: 2.875rem;
     color: #000000;
     font-family: 'Hepta Slab', Helvetica, Arial!important;
+    line-height: 1.4;
 }
 
 .texto-destaque strong {
@@ -341,7 +342,7 @@ li.slick-active button {
 }
 
 .bloco-imagem {
-    height: 31.25rem;
+    height: 34.46rem;
     /*--para caber mais contexto --*/
     border: .0625rem solid #c5c5c5;
     padding-top: .9375rem;
@@ -353,6 +354,7 @@ li.slick-active button {
 p {
     text-align: center;
     margin-left: 3%;
+    line-height: 1.4;
 }
 
 .bloco-texto {
@@ -562,7 +564,7 @@ h3 {
     }
     .bloco-imagem {
         border: none;
-        height: 27.375rem;
+        height: 30.375rem;
     }
     .bloco-logos img {
         display: flex;

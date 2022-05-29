@@ -18,6 +18,9 @@
  display: flex;
 }
 
+col-100-2 p {
+    line-height: 1.4;
+}
 .menu-openner {
     margin-right: .9375rem;
     font-size: 1.625rem;
@@ -136,6 +139,7 @@ h1 {
     font-size:.8125rem;
     color:#555;
     margin-top:.625rem;
+    line-height: 1.5;
 }
 
 .modelsWindowArea {

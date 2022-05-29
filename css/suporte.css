@@ -136,6 +136,7 @@
 .infoBox div a {
     color: #fff;
     text-shadow: 0.1em 0.1em 1.2em #ff2033;
+    line-height: 1.5;
 }
 
 .info .infoBox div p {
