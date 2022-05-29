@@ -7,3 +7,5 @@
 </ul>
 
  Disponivel em: https://setor-geek.web.app
+
+[img](https://github.com/douglas-g-o/Setor-Geek/issues/1)
