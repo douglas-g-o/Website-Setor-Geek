@@ -342,7 +342,7 @@ li.slick-active button {
 }
 
 .bloco-imagem {
-    height: 34.46rem;
+    height: 35.625rem;
     /*--para caber mais contexto --*/
     border: .0625rem solid #c5c5c5;
     padding-top: .9375rem;
@@ -390,6 +390,7 @@ h3 {
 
 /*-- rodape--*/
 
+
 .bloco-imagens-texto:after {
     width: 100%;
     display: inline-block;
@@ -403,6 +404,27 @@ h3 {
     width: 25%;
     text-decoration: none;
     list-style: none;
+}
+
+.col-4 a {
+    color: white;
+    text-decoration: underline red;
+}
+
+.col-4 a:hover {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 800;
+    background: linear-gradient(to right, #690606, #690606 50%, #ff0000 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+    text-decoration: none;
 }
 
 .col-4 img {
@@ -429,6 +451,27 @@ h3 {
 
 /*-- rodape--*/
 
+.content-mobile-3 a{
+    color: white;
+    text-decoration: underline red;
+}
+
+.content-mobile-3 a:hover{
+    position: relative;
+    font-size: 17px;
+    font-weight: 800;
+    overflow: hidden;
+    background: linear-gradient(to right, #690606, #690606 50%, #ff0000 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+    text-decoration: none;
+
+}
+
 .footer h3 {
     font-weight: normal!important;
     text-align: left;
@@ -454,10 +497,6 @@ h3 {
 
 .footer-2 p {
     padding: .625rem;
-}
-
-.email {
-    color: #ff2033;
 }
 
 .local:before,
