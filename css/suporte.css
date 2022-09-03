@@ -44,14 +44,20 @@
 
 .contact h3 {
     color: #000000;
-    font-weight: 500;
     font-size: 1.4em;
-    margin-bottom: .625rem;
+    margin-bottom: 3.625rem;
+    text-align: center;
 }
 
 .formBox .row50 {
     display: flex;
     gap: 1.25rem;
+}
+
+.span-required{
+    display: none;
+    font-size: 12px;
+    color: #e63636;
 }
 
 .inputBox {
@@ -60,6 +66,7 @@
     margin-bottom: .625rem;
     width: 50%;
 }
+
 
 .formBox .row100 .inputBox {
     width: 100%;
@@ -70,6 +77,8 @@
     margin-top: .625rem;
     margin-bottom: .3125rem;
     font-weight: 500;
+    font-size: 1.125rem;
+    letter-spacing: .125rem;
 }
 
 .inputBox input {
@@ -77,7 +86,8 @@
     font-size: 1.1em;
     outline: none;
     border: .0625rem solid #333;
-    border-radius: 7px;
+    border-radius: .4375rem;
+    margin-top: .1875rem;
 }
 
 .inputBox textarea {
@@ -88,7 +98,8 @@
     resize: none;
     min-height: 13.75rem;
     margin-bottom: .625rem;
-    border-radius: 7px;
+    border-radius: .4375rem;
+    margin-top: .1875rem;
 }
 
 .inputBox input[type="submit"] {
@@ -119,8 +130,42 @@
     align-items: center;
     margin-bottom: .625rem;
 }
+.infoBox a:hover {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 800;
+    background: linear-gradient(to right, #690606, #690606 50%, #ff0000 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: 275ms ease;
+    text-decoration: none;
+
+}
+.info .infoBox1 div {
+    display: flex;
+    align-items: center;
+    margin-bottom: .625rem;
+}
 
 .info .infoBox div span {
+    min-width: 2.5rem;
+    height: 2.5rem;
+    color: #fff;
+    background: #ff0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 50%;
+    margin-right: .9375rem;
+}
+
+.info .infoBox1 div span {
     min-width: 2.5rem;
     height: 2.5rem;
     color: #fff;
@@ -139,12 +184,32 @@
     line-height: 1.5;
 }
 
+.infoBox1 div a {
+    color: #fff;
+    text-shadow: 0.1em 0.1em 1.2em #ff2033;
+    line-height: 1.5;
+}
+
 .info .infoBox div p {
     color: #fff;
     font-size: 1.1em;
 }
 
+.info .infoBox1 div p {
+    color: #fff;
+    font-size: 1.1em;
+}
+
 .info .infoBox div p {
+    color: #fff;
+    text-shadow: 0.1em 0.1em 1.2em #ff2033;
+    text-decoration: none;
+    font-size: .875rem;
+    text-align: left;
+    margin-left: 0%;
+}
+
+.info .infoBox1 div p {
     color: #fff;
     text-shadow: 0.1em 0.1em 1.2em #ff2033;
     text-decoration: none;
