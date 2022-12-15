@@ -24,7 +24,7 @@ let msgSuccess = document.querySelector('#msgSuccess')
 nome.addEventListener('keyup', () => {  
     if(nome.value.length <= 1){
       labelNome.setAttribute('style', "color: red;font-size: 20px;font-weight: bold")
-      labelNome.innerHTML = 'Nome* Preenchimento obrigatorio'
+      labelNome.innerHTML = 'Nome* Preenchimento obrigatório'
       nome.setAttribute('style', 'border-color: red')
       validNome = false
       
@@ -38,7 +38,7 @@ nome.addEventListener('keyup', () => {
 sobrenome.addEventListener('keyup', () => {
     if(sobrenome.value.length <= 1){
       labelSobrenome.setAttribute('style', "color: red;font-size: 20px;font-weight: bold")
-      labelSobrenome.innerHTML = 'Sobrenome* Preenchimento obrigatorio'
+      labelSobrenome.innerHTML = 'Sobrenome* Preenchimento obrigatório'
       sobrenome.setAttribute('style', 'border-color: red')
       validSobrenome = false
     } else {
@@ -52,7 +52,7 @@ sobrenome.addEventListener('keyup', () => {
 email.addEventListener('keyup', () => {
     if(email.value.length <= 5){
         labelEmail.setAttribute('style', "color: red;font-size: 20px;font-weight: bold")
-        labelEmail.innerHTML = 'Email* Preenchimento obrigatorio'
+        labelEmail.innerHTML = 'Email* Preenchimento obrigatório'
         email.setAttribute('style', 'border-color: red')
         validEmail = false
       } else {
@@ -66,7 +66,7 @@ email.addEventListener('keyup', () => {
 telefone.addEventListener('keyup', () => {
     if(telefone.value.length <= 9){
         labelTelefone.setAttribute('style', "color: red;font-size: 20px;font-weight: bold")
-        labelTelefone.innerHTML = 'Telefone* Somente numeros, obrigatorio DD'
+        labelTelefone.innerHTML = 'Telefone* Somente números, obrigatório DD'
         telefone.setAttribute('style', 'border-color: red')
         validTelefone = false
       } else {
@@ -80,7 +80,7 @@ telefone.addEventListener('keyup', () => {
 mensagem.addEventListener('keyup', () => {
     if(mensagem.value.length <= 4){
         labelMensagem.setAttribute('style', "color: red;font-size: 20px;font-weight: bold")
-        labelMensagem.innerHTML = 'Mensagem* Insira no minimo 5 caracteres'
+        labelMensagem.innerHTML = 'Mensagem* Insira no mínimo 5 caracteres'
         mensagem.setAttribute('style', 'border-color: red')
         validMensagem = false
       } else {

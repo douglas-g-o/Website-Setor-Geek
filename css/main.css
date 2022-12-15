@@ -316,7 +316,7 @@ li.slick-active button {
 
 .texto-destaque h1 {
     text-transform: uppercase;
-    font-size: 2.875rem;
+    font-size: 2.000rem;
     color: #000000;
     font-family: 'Hepta Slab', Helvetica, Arial!important;
     line-height: 1.4;
@@ -347,7 +347,7 @@ li.slick-active button {
 }
 
 .bloco-imagem {
-    height: 35.625rem;
+    height: 36.625rem;
     /*--para caber mais contexto --*/
     border: .0625rem solid #c5c5c5;
     padding-top: .9375rem;
@@ -358,7 +358,6 @@ li.slick-active button {
 .bloco-imagem b,
 p {
     text-align: center;
-    margin-left: 3%;
     line-height: 1.4;
 }
 
@@ -369,7 +368,6 @@ p {
 
 .bloco-texto img {
     width: 15.625rem;
-    /*--tamanho das 3 imgs inicio  --*/
     height: 10rem;
 }
 
@@ -420,7 +418,7 @@ h3 {
     position: relative;
     overflow: hidden;
     display: inline-block;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 800;
     background: linear-gradient(to right, #690606, #690606 50%, #ff0000 50%);
     background-clip: text;
@@ -463,7 +461,7 @@ h3 {
 
 .content-mobile-3 a:hover{
     position: relative;
-    font-size: 17px;
+    font-size: 1.0625rem;
     font-weight: 800;
     overflow: hidden;
     background: linear-gradient(to right, #690606, #690606 50%, #ff0000 50%);
@@ -507,7 +505,6 @@ h3 {
 .local:before,
 .email:before,
 .telefone:before {
-    /*-- chamando os 3--*/
     content: '';
     width: 1.125rem;
     height: 1rem;
@@ -557,9 +554,13 @@ h3 {
 /*-- updates--*/
 
 
-/*-- responsive--*/
+/*-- responsivo--*/
 
-@media (max-width:26rem) {
+@media  (max-width: 23.374rem) {
+    .smallerimg img{
+        width: 37%;
+        margin-right: 69%;
+    }
     .logo {
         margin-left: 11%;
     }
@@ -579,15 +580,16 @@ h3 {
     }
     .texto-destaque h1 {
         width: 26%;
-        margin-left: 8%;
+        margin-left: 6%;
+        font-size: 1.175rem;
     }
     .texto-destaque p {
         width: 26%;
-        margin-left: 48px;
+        margin-left: 3rem;
     }
     .content-mobile p {
         width: 28%;
-        margin-left: 68px;
+        margin-left: 4.6rem;
 
     }
     .bloco-texto {
@@ -602,6 +604,7 @@ h3 {
     .content-mobile-1 p {
         width: 31%;
         border: none;
+        margin-left: 3%;
     }
     .bloco-texto img {
         margin-right: 64%;
@@ -635,6 +638,122 @@ h3 {
     }
     .content-mobile-3 p {
         width: 35%;
+        margin-left: 2%;
+    }
+    .whatsapp {
+        margin-right: 45%;
+        height: 1.875rem;
+    }
+    .whatsapp img {
+        width: 2.1875rem;
+    }
+    #navbar ul li {
+        display: block;
+    }
+    #navbar ul li:hover ul {
+        width: 100%;
+        position: relative;
+    }
+    .whatsapp {
+        margin-right: 56%;
+        height: 5.125rem;
+    }
+    .whatsapp img {
+        width: 75%;
+    }
+    .slick-slide {
+        height: 12.5rem !important;
+    }
+    button.slick-prev,
+    button.slick-next {
+        background-size: 2.5rem;
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+}
+@media (min-width:23.375rem) and (max-width: 26.1rem) {
+    .smallerimg img{
+        width: 37%;
+        margin-right: 61%;
+    }
+    .logo {
+        margin-left: 11%;
+    }
+    .redes-sociais {
+        margin-left: 8%;
+        margin-top: 1.125rem;
+    }
+    .busca {
+        margin-top: 4.5625rem;
+        margin-right: 25%;
+    }
+    .busca input {
+        width: 16.75rem;
+    }
+    .texto-destaque h3 {
+        margin-right: 63%;
+    }
+    .texto-destaque h1 {
+        width: 26%;
+        margin-left: 6%;
+        font-size: 1.175rem;
+    }
+    .texto-destaque p {
+        width: 26%;
+        margin-left: 3rem;
+    }
+    .content-mobile p {
+        width: 28%;
+        margin-left: 4.6rem;
+
+    }
+    .bloco-texto {
+        width: 100%;
+    }
+    .col-100 {
+        width: 100%;
+    }
+    .content-mobile-1 {
+        width: 0%;
+    }
+    .content-mobile-1 p {
+        width: 31%;
+        border: none;
+        margin-left: 3%;
+    }
+    .bloco-texto img {
+        margin-right: 64%;
+    }
+    .bloco-imagem {
+        border: none;
+        height: 30.375rem;
+    }
+    .bloco-logos img {
+        display: flex;
+        flex-direction: column;
+        margin-left: -9%;
+    }
+    .bloco-logos {
+        height: 33.5625rem;
+    }
+    .content-1 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 36%;
+    }
+
+    .content-2 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 25%;
+    }
+
+    .footer-2 p {
+        padding: 0%;
+    }
+    .content-mobile-3 p {
+        width: 35%;
+        margin-left: 3%;
     }
     .whatsapp {
         margin-right: 45%;
@@ -669,23 +788,28 @@ h3 {
 }
 
 @media (min-width:26.1rem) and (max-width: 28.5rem) {
+    .smallerimg img{
+        width: 40%;
+        margin-right: 61%;
+    }
     .logo {
-        margin-left: 5%;
+        margin-left: 12%;
     }
     .redes-sociais {
-        margin-left: 1%;
+        margin-left: 6%;
         margin-top: 1.125rem;
         width: 100%;
     }
     .busca {
         margin-top: 4.5625rem;
-        margin-right: 30%;
+        margin-right: 25%;
     }
     .texto-destaque h3 {
         margin-right: 69%;
     }
     .texto-destaque h1 {
-        width: 37%;
+        width: 38%;
+        font-size: 1.175rem;
     }
     .texto-destaque p {
         width: 32%;
@@ -693,10 +817,11 @@ h3 {
     }
     .content-mobile p {
         width: 33%;
-        margin-left: 2%;
+        margin-left: 6%;
     }
     .bloco-texto {
         width: 100%;
+        margin-left: 7%;
     }
     .col-100 {
         width: 100%;
@@ -725,13 +850,13 @@ h3 {
     .content-1 {
         display: flex;
         flex-direction: column;
-        margin-left: 29%;
+        margin-left: 38%;
     }
 
     .content-2 {
         display: flex;
         flex-direction: column;
-        margin-left: 20%;
+        margin-left: 32%;
     }
 
     .footer-2 p {
@@ -739,6 +864,7 @@ h3 {
     }
     .content-mobile-3 p {
         width: 36%;
+        margin-left: 4%;
     }
     .whatsapp {
         margin-right: 45%;
@@ -777,7 +903,11 @@ h3 {
     }
 }
 
-@media (min-width:28.5rem) and (max-width: 32.0625rem) {
+@media (min-width:28.5rem) and (max-width: 32.375rem) {
+    .smallerimg img{
+        width: 48%;
+        margin-right: 52%;
+    }
     .logo {
         margin-left: 15%;
     }
@@ -795,15 +925,17 @@ h3 {
     }
     .texto-destaque h1 {
         width: 45%;
+        font-size: 1.275rem;
     }
     .texto-destaque p {
         width: 85%;
     }
     .content-mobile p {
-        width: 45%;
+        width: 41%;
+        margin-left: 5%;
     }
     .bloco-texto {
-        width: 48%;
+        width: 56%;
     }
     .col-100 {
         width: 100%;
@@ -817,7 +949,6 @@ h3 {
     }
     .bloco-texto img {
         margin-right: 20%;
-        width: 60%;
     }
     .bloco-imagem {
         border: none;
@@ -838,7 +969,7 @@ h3 {
     .content-2 {
         display: flex;
         flex-direction: column;
-        margin-left: 20%;
+        margin-left: 30%;
     }
 
     .footer-2 p {
@@ -846,7 +977,7 @@ h3 {
     }
     .content-mobile-3 p {
         width: 39%;
-        margin-left: 3%;
+        margin-left: 5%;
     }
     .whatsapp {
         margin-right: -18%;
@@ -872,35 +1003,37 @@ h3 {
         width: 2.5rem;
     }
 }
-
-@media (min-width:32.125rem) and (max-width: 38.3125rem) {
+@media (min-width:32.375rem) and (max-width: 35.75rem) {
+    .smallerimg img{
+        width: 48%;
+        margin-right: 43%;
+    }
     .logo {
-        margin-left: 15%;
+        margin-left: 20%;
     }
     .redes-sociais {
-        margin-left: 7%;
+        margin-left: 14%;
         margin-top: 1.125rem;
         width: 100%;
     }
     .busca {
         margin-top: 4.5625rem;
-        margin-right: 24%;
-    }
-    .texto-destaque h3 {
-        margin-right: 10%;
+        margin-right: 17%;
     }
     .texto-destaque h1 {
-        width: 49%;
+        width: 53%;
         margin-left: 2%;
+        font-size: 1.375rem;
     }
     .texto-destaque p {
-        width: 100%;
+        width: 81%;
+        margin-left: 6%;
     }
     .content-mobile p {
-        width: 50%;
+        width: 46%;
     }
     .bloco-texto {
-        width: 48%;
+        width: 57%;
     }
     .col-100 {
         width: 100%;
@@ -909,12 +1042,11 @@ h3 {
         width: 0%;
     }
     .content-mobile-1 p {
-        width: 100%;
+        width: 82%;
         border: none;
+        margin-left: 8%;
     }
     .bloco-texto img {
-        margin-right: 0%;
-        width: 75%;
     }
     .bloco-imagem {
         border: none;
@@ -929,13 +1061,113 @@ h3 {
     .content-1 {
         display: flex;
         flex-direction: column;
-        margin-left: 25%;
+        margin-left: 29%;
     }
 
     .content-2 {
         display: flex;
         flex-direction: column;
+        margin-left: 35%;
+    }
+
+    .footer-2 p {
+        padding: 0%;
+    }
+    .content-mobile-3 p {
+        width: 48%;
+        margin-left: 3%;
+    }
+    .whatsapp {
+        margin-right: -18%;
+        height: 3.4375rem;
+    }
+    .whatsapp img {
+        width: 80%;
+    }
+    #navbar ul li {
+        display: block;
+    }
+    #navbar ul li:hover ul {
+        width: 100%;
+        position: relative;
+    }
+    .bloco-imagens-texto::before {
+        background-image: none;
+    }
+    .slick-slide {
+        height: 17.1875rem !important;
+    }
+    button.slick-prev,
+    button.slick-next {
+        background-size: 3.4375rem;
+        height: 3.4375rem;
+        width: 2.8125rem;
+    }
+}
+@media (min-width:35.75rem) and (max-width: 38.3125rem) {
+    .smallerimg img{
+        width: 48%;
+        margin-right: 43%;
+    }
+    .logo {
         margin-left: 20%;
+    }
+    .redes-sociais {
+        margin-left: 14%;
+        margin-top: 1.125rem;
+        width: 100%;
+    }
+    .busca {
+        margin-top: 4.5625rem;
+        margin-right: 17%;
+    }
+    .texto-destaque h1 {
+        width: 53%;
+        margin-left: 2%;
+        font-size: 1.375rem;
+    }
+    .texto-destaque p {
+        width: 94%;
+        margin-left: 6%;
+    }
+    .content-mobile p {
+        width: 50%;
+    }
+    .bloco-texto {
+        width: 57%;
+    }
+    .col-100 {
+        width: 100%;
+    }
+    .content-mobile-1 {
+        width: 0%;
+    }
+    .content-mobile-1 p {
+        width: 100%;
+        border: none;
+    }
+    .bloco-texto img {
+    }
+    .bloco-imagem {
+        border: none;
+    }
+    .bloco-logos img {
+        display: flex;
+        flex-direction: column;
+    }
+    .bloco-logos {
+        height: 33.5625rem;
+    }
+    .content-1 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 29%;
+    }
+
+    .content-2 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 35%;
     }
 
     .footer-2 p {
@@ -973,7 +1205,11 @@ h3 {
     }
 }
 
-@media (min-width:38.375rem) and (max-width: 46.875rem) {
+@media (min-width:38.375rem) and (max-width: 41.9375rem) {
+    .smallerimg img{
+        width: 48%;
+        margin-right: 40%;
+    }
     .logo {
         margin-left: 27%;
     }
@@ -992,12 +1228,13 @@ h3 {
     .texto-destaque h1 {
         width: 53%;
         margin-left: 3%;
+        font-size: 1.575rem;
     }
     .texto-destaque p {
         width: 100%;
     }
     .content-mobile p {
-        width: 49%;
+        width: 64%;
     }
     .bloco-texto {
         width: 56%;
@@ -1009,13 +1246,12 @@ h3 {
         width: 0%;
     }
     .content-mobile-1 p {
-        width: 100%;
+        width: 103%;
         border: none;
         font-size: 1.125rem;
     }
     .bloco-texto img {
         margin-right: -5%;
-        width: 75%;
     }
     .bloco-imagem {
         border: none;
@@ -1038,7 +1274,7 @@ h3 {
     .content-2 {
         display: flex;
         flex-direction: column;
-        margin-left: 20%;
+        margin-left: 39%;
     }
 
     .footer-2 p {
@@ -1074,8 +1310,11 @@ h3 {
         width: 3.4375rem;
     }
 }
-
-@media (min-width:46.9375rem) and (max-width: 53.125rem) {
+@media (min-width:41.9375rem) and (max-width: 44.3125rem) {
+    .smallerimg img{
+        width: 50%;
+        margin-right: 25%;
+    }
     .logo {
         margin-left: 27%;
     }
@@ -1094,13 +1333,17 @@ h3 {
     .texto-destaque h1 {
         width: 75%;
         margin-left: 0%;
+        font-size: 1.450rem;
     }
     .texto-destaque p {
-        width: 125%;
+        width: 110%;
+        margin-left: 7%;    
     }
     .content-mobile p {
-        width: 68%;
+        width: 65%;
+        margin-left: 5%;
     }
+    
     .bloco-texto {
         width: 56%;
     }
@@ -1111,13 +1354,13 @@ h3 {
         width: 0%;
     }
     .content-mobile-1 p {
-        width: 100%;
+        width: 112%;
         border: none;
         font-size: 1.125rem;
+        margin-left: 7%;
     }
     .bloco-texto img {
         margin-right: -25%;
-        width: 75%;
     }
     .bloco-imagem {
         border: none;
@@ -1132,7 +1375,7 @@ h3 {
     .content-1 {
         display: flex;
         flex-direction: column;
-        margin-left: 10%;
+        margin-left: 12%;
         width: 129.6875rem;
         font-size: 1.125rem;
     }
@@ -1140,7 +1383,330 @@ h3 {
     .content-2 {
         display: flex;
         flex-direction: column;
-        margin-left: 20%;
+        margin-left: 36%;
+    }
+
+    .footer-2 p {
+        padding: 0%;
+    }
+    .content-mobile-3 p {
+        width: 67%;
+        margin-left: 1%;
+    }
+    .whatsapp {
+        margin-right: -10%;
+        height: 6.9375rem;
+    }
+    .whatsapp img {
+        width: 100%;
+    }
+    #navbar ul li {
+        display: block;
+    }
+    #navbar ul li:hover ul {
+        width: 100%;
+        position: relative;
+    }
+    .bloco-imagens-texto::before {
+        background-image: none;
+    }
+    .slick-slide {
+        height: 22.5rem !important;
+    }
+    button.slick-prev,
+    button.slick-next {
+        background-size: 4.0625rem;
+        height: 4.0625rem;
+        width: 3.4375rem;
+    }
+}
+@media (min-width:44.3125rem) and (max-width: 46.1875rem) {
+    .smallerimg img{
+        width: 50%;
+        margin-right: 25%;
+    }
+    .logo {
+        margin-left: 27%;
+    }
+    .redes-sociais {
+        margin-left: 19%;
+        margin-top: 1.125rem;
+        width: 100%;
+    }
+    .busca {
+        margin-top: 4.5625rem;
+        margin-right: 11%;
+    }
+    .texto-destaque h3 {
+        margin-right: -30%;
+    }
+    .texto-destaque h1 {
+        width: 75%;
+        margin-left: 0%;
+        font-size: 1.450rem;
+    }
+    .texto-destaque p {
+        width: 125%;
+    }
+    .content-mobile p {
+        width: 68%;
+        margin-left: 4%;
+    }
+    
+    .bloco-texto {
+        width: 56%;
+    }
+    .col-100 {
+        width: 100%;
+    }
+    .content-mobile-1 {
+        width: 0%;
+    }
+    .content-mobile-1 p {
+        width: 126%;
+        border: none;
+        font-size: 1.125rem;
+    }
+    .bloco-texto img {
+        margin-right: -25%;
+    }
+    .bloco-imagem {
+        border: none;
+    }
+    .bloco-logos img {
+        display: flex;
+        flex-direction: column;
+    }
+    .bloco-logos {
+        height: 33.5625rem;
+    }
+    .content-1 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 12%;
+        width: 129.6875rem;
+        font-size: 1.125rem;
+    }
+
+    .content-2 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 33%;
+    }
+
+    .footer-2 p {
+        padding: 0%;
+    }
+    .content-mobile-3 p {
+        width: 70%;
+        margin-left: 1%;
+    }
+    .whatsapp {
+        margin-right: -10%;
+        height: 6.9375rem;
+    }
+    .whatsapp img {
+        width: 100%;
+    }
+    #navbar ul li {
+        display: block;
+    }
+    #navbar ul li:hover ul {
+        width: 100%;
+        position: relative;
+    }
+    .bloco-imagens-texto::before {
+        background-image: none;
+    }
+    .slick-slide {
+        height: 22.5rem !important;
+    }
+    button.slick-prev,
+    button.slick-next {
+        background-size: 4.0625rem;
+        height: 4.0625rem;
+        width: 3.4375rem;
+    }
+}
+@media (min-width:46.1875rem) and (max-width: 49.8125rem) {
+    .smallerimg img{
+        width: 50%;
+        margin-right: 25%;
+    }
+    .logo {
+        margin-left: 27%;
+    }
+    .redes-sociais {
+        margin-left: 19%;
+        margin-top: 1.125rem;
+        width: 100%;
+    }
+    .busca {
+        margin-top: 4.5625rem;
+        margin-right: 11%;
+    }
+    .texto-destaque h3 {
+        margin-right: -30%;
+    }
+    .texto-destaque h1 {
+        width: 75%;
+        margin-left: 0%;
+        font-size: 1.650rem;
+    }
+    .texto-destaque p {
+        width: 125%;
+    }
+    .content-mobile p {
+        width: 78%;
+    }
+    .bloco-texto {
+        width: 56%;
+    }
+    .col-100 {
+        width: 100%;
+    }
+    .content-mobile-1 {
+        width: 0%;
+    }
+    .content-mobile-1 p {
+        width: 126%;
+        border: none;
+        font-size: 1.125rem;
+    }
+    .bloco-texto img {
+        margin-right: -25%;
+    }
+    .bloco-imagem {
+        border: none;
+    }
+    .bloco-logos img {
+        display: flex;
+        flex-direction: column;
+    }
+    .bloco-logos {
+        height: 33.5625rem;
+    }
+    .content-1 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 12%;
+        width: 129.6875rem;
+        font-size: 1.125rem;
+    }
+
+    .content-2 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 33%;
+    }
+
+    .footer-2 p {
+        padding: 0%;
+    }
+    .content-mobile-3 p {
+        width: 78%;
+        margin-left: 1%;
+    }
+    .whatsapp {
+        margin-right: -10%;
+        height: 6.9375rem;
+    }
+    .whatsapp img {
+        width: 100%;
+    }
+    #navbar ul li {
+        display: block;
+    }
+    #navbar ul li:hover ul {
+        width: 100%;
+        position: relative;
+    }
+    .bloco-imagens-texto::before {
+        background-image: none;
+    }
+    .slick-slide {
+        height: 22.5rem !important;
+    }
+    button.slick-prev,
+    button.slick-next {
+        background-size: 4.0625rem;
+        height: 4.0625rem;
+        width: 3.4375rem;
+    }
+}
+
+@media (min-width:49.8125rem) and (max-width: 53.125rem) {
+    .smallerimg img{
+        width: 50%;
+        margin-right: 12%;
+    }
+    .logo {
+        margin-left: 27%;
+    }
+    .redes-sociais {
+        margin-left: 19%;
+        margin-top: 1.125rem;
+        width: 100%;
+    }
+    .busca {
+        margin-top: 4.5625rem;
+        margin-right: 11%;
+    }
+    .texto-destaque h3 {
+        margin-right: -52%;
+    }
+    .texto-destaque h1 {
+        width: 88%;
+        margin-left: 0%;
+        font-size: 1.550rem;
+    }
+    .texto-destaque p {
+        width: 145%;
+    }
+    .content-mobile p {    
+        width: 82%;
+        margin-left: 2%;
+    }
+    .bloco-texto {
+        width: 56%;
+    }
+    .col-100 {
+        width: 100%;
+    }
+    .content-mobile-1 {
+        width: 0%;
+    }
+    .content-mobile-1 p {
+        width: 135%;
+        border: none;
+        font-size: 1.125rem;
+        margin-left: 8%;
+    }
+    .bloco-texto img {
+        margin-right: -51%;
+    }
+    .bloco-imagem {
+        border: none;
+    }
+    .bloco-logos img {
+        display: flex;
+        flex-direction: column;
+    }
+    .bloco-logos {
+        height: 33.5625rem;
+    }
+    .content-1 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 22%;
+        width: 129.6875rem;
+        font-size: 1.125rem;
+    }
+
+    .content-2 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 43%;
     }
 
     .footer-2 p {
@@ -1179,6 +1745,10 @@ h3 {
 }
 
 @media (min-width:53.1875rem) and (max-width: 59.375rem) {
+    .smallerimg img{
+        width: 55%;
+        margin-right: 6%;
+    }
     .logo {
         margin-left: 15%;
     }
@@ -1192,17 +1762,19 @@ h3 {
         margin-right: 5%;
     }
     .texto-destaque h3 {
-        margin-right: -30%;
+        margin-right: -64%;
     }
+    
     .texto-destaque h1 {
-        width: 75%;
+        width: 95%;
         margin-left: 0%;
+        font-size: 1.700rem;
     }
     .texto-destaque p {
-        width: 125%;
+        width: 154%;
     }
     .content-mobile p {
-        width: 68%;
+        width: 90%;
     }
     .bloco-texto {
         width: 56%;
@@ -1214,13 +1786,12 @@ h3 {
         width: 35%;
     }
     .content-mobile-1 p {
-        width: 100%;
+        width: 156%;
         border: none;
         font-size: 1.125rem;
     }
     .bloco-texto img {
-        margin-right: -25%;
-        width: 75%;
+        margin-right: -61%;
     }
     .bloco-imagem {
         border: none;
@@ -1238,7 +1809,7 @@ h3 {
     .content-2 {
         display: flex;
         flex-direction: column;
-        margin-left: 20%;
+        margin-left: 40%;
     }
 
     .footer-2 p {
@@ -1277,18 +1848,15 @@ h3 {
     .texto-destaque h3 {
         margin-right: -30%;
     }
-    .texto-destaque h1 {
-        width: 75%;
-        margin-left: 0%;
-    }
+
     .texto-destaque p {
         width: 125%;
     }
     .content-mobile p {
-        width: 68%;
+        width: 95%;
     }
     .bloco-texto {
-        width: 56%;
+        width: 75%;
     }
     .col-100 {
         width: 100%;
@@ -1297,13 +1865,12 @@ h3 {
         width: 35%;
     }
     .content-mobile-1 p {
-        width: 100%;
+        width: 126%;
         border: none;
         font-size: 1.125rem;
     }
     .bloco-texto img {
         margin-right: -25%;
-        width: 75%;
     }
     .bloco-imagem {
         border: none;
@@ -1321,15 +1888,14 @@ h3 {
     .content-2 {
         display: flex;
         flex-direction: column;
-        margin-left: 20%;
+        margin-left: 40%;
     }
 
     .footer-2 p {
         padding: 0%;
     }
     .content-mobile-3 p {
-        width: 81%;
-        margin-left: -3%;
+        width: 95%;
     }
     .whatsapp {
         margin-right: -10%;
@@ -1341,9 +1907,6 @@ h3 {
 }
 
 @media (min-width:65.625rem) and (max-width: 71.875rem) {
-    .content-mobile-1 {
-        width: 2%;
-    }
     .content-mobile-1 p {
         width: 100%;
         border: none;
@@ -1353,37 +1916,33 @@ h3 {
         width: 95%;
     }
     .bloco-imagem {
-        height: 31.375rem;
+        height: 41.375rem;
     }
 }
 
 @media (min-width:71.9375rem) and (max-width: 78.125rem) {
-    .content-mobile-1 {
-        width: 40%;
-    }
+
     .content-mobile-1 p {
         width: 100%;
         border: none;
         font-size: 1.125rem;
     }
     .bloco-imagem {
-        height: 31.375rem;
+        height: 41.375rem;
     }
 }
 
 @media (min-width:78.1875rem) and (max-width: 84.375rem) {
-    .content-mobile-1 {
-        width: 40%;
-    }
+
     .content-mobile-1 p {
         width: 100%;
         border: none;
         font-size: 1.125rem;
     }
     .bloco-imagem {
-        height: 31.375rem;
+        height: 41.375rem;
     }
 }
 
 
-/*-- responsive--*/
+/*-- responsivo--*/
