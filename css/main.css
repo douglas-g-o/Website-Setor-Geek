@@ -16,32 +16,76 @@ body {
 }
 
 .menu-principal {
-    width: 96%;
-    background-color: #252323;
-    height: 4.5rem;
-    margin-top: .625rem;
+    margin-top: 1rem;
+}
+
+.logo img {
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    border-radius: 10%;
+}
+
+.logo:hover img {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
 main,
 .content,
 .content-1,
 .content-2 {
-    /*--barra do topo junto com o banner para mexer posição--*/
     margin: 0 auto;
-    width: 61.25rem;
-    position: relative;
+}
+.header-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-bottom: 10px;
+  }
+
+ /* barra de pesquisa */
+
+.search-bar {
+    background-color: #000;
+    border: 2px solid #000;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 0 0 2px white;
+    display: flex;
 }
 
-.logo {
-    float: left;
-    width: 70%;
+#search-input {
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    flex: 1;
+    color: #fff;
+    background-color: transparent;
+    width: 18.75rem;
 }
 
-.redes-sociais {
-    width: 25%;
-    float: left;
+#search-button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #f00;
+    color: #fff;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
 }
 
+#search-button:hover {
+    background-color: #c00;
+}
+
+.fa-search {
+    font-size: 16px;
+}
+
+
+/* barra de pesquisa */
 
 /*--menu--*/
 
@@ -50,14 +94,8 @@ main,
     margin: -0.1875rem auto;
     padding: .0625rem;
     text-align: center;
-    /*--menu no meio--*/
-    /*--retirar no futuro?--*/
     font-weight: bold;
-    /*--deixar em negrito--*/
-}
 
-#navbar {
-    width: 95%;
 }
 
 #navbar ul {
@@ -88,6 +126,7 @@ main,
     background: #000000;
     color: #ff2033;
     z-index: 1;
+    border-bottom: 4px solid #ff2033;
     /*--tornar o submenu "absoluto"--*/
 }
 
@@ -101,7 +140,8 @@ main,
     left: 0;
     margin-top: 1rem;
     width: auto;
-    /*--preencher todos os submenu--*/
+    box-shadow: 0 2px 10px rgba(255, 0, 0, 0.5);
+    /*--sombra no submenu--*/
 }
 
 #navbar ul li:hover ul li {
@@ -110,7 +150,9 @@ main,
     min-height: 2rem;
     display: flex;
     flex-direction: column;
+    border-bottom: 1px solid rgb(255, 0, 0);
 }
+
 
 #navbar ul li:hover ul li a {
     color: #ff2033;
@@ -158,31 +200,6 @@ main,
 
 /*--menu--*/
 
-.busca {
-    text-align: center;
-    /*--retirar no futuro?--*/
-    width: 68%;
-    float: right;
-    /*--retirar no futuro?--*/
-}
-
-.busca input {
-    background-image: url('../img/lupa.png');
-    background-repeat: no-repeat;
-    background-position: 96%;
-    height: 2.25rem;
-    padding: .75rem;
-    width: 18.125rem;
-    margin-top: -3.125rem;
-    /*--altura barra menu--*/
-    float: left;
-    /*--retirar no futuro?--*/
-    background-color: #000000;
-    /*--barra preta--*/
-    color: #ff2033;
-    /*--cor do texto da barra--*/
-}
-
 .col-100 {
     /*-- index--*/
     width: 100%;
@@ -190,6 +207,23 @@ main,
     float: left;
     background: #ffffff;
     font-family: 'Lato', sans-serif;
+}
+
+.content-mobile-1{
+    margin-right: 12.5rem;
+    margin-left: 12.5rem;
+}
+
+.content-1 {
+    margin-left: 15.625rem;
+    margin-right: 15.625rem;
+
+}
+
+.footer {
+    padding-left: 15.625rem;
+    padding-right: 15.625rem;
+
 }
 
 .col-100-2 {
@@ -220,14 +254,22 @@ main,
 }
 
 .col-100-4 {
-    /*-- para o suporte--*/
-    background: linear-gradient(90deg, #000000 -10%, #b12222 30%, #b82121 30%, #000000 120%);
+    background: linear-gradient(90deg, #000 -10%, #b12222 30% 30%, #000 120%);
     display: flex;
     justify-content: center;
     width: 100%;
     font-family: 'Hepta Slab', Helvetica, Arial;
 }
-
+.smallerimg {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .smallerimg img {
+    width: 100%;
+    height: auto;
+  }
 
 /*--carrosel--*/
 
@@ -237,7 +279,7 @@ button.slick-prev {
     border: none;
     width: 3.5rem;
     height: 4.375rem;
-    z-index: 9;
+    z-index: 1;
     background-color: transparent;
     position: absolute;
     background-image: url(../img/anterior.png);
@@ -251,7 +293,6 @@ button.slick-next {
     border: none;
     width: 3.5rem;
     height: 4.375rem;
-    z-index: 9;
     background-color: transparent;
     position: absolute;
     background-image: url(../img/proximo.png);
@@ -279,12 +320,11 @@ button.slick-next {
 }
 
 .slick-dots {
-    margin: 0 auto;
-    width: 50%;
     position: absolute;
-    left: 41%;
-    top: 35rem;
-}
+    top: 35em;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
 li.slick-active button {
     background: #000000;
@@ -309,7 +349,15 @@ li.slick-active button {
     z-index: 1000;
     list-style: none;
 }
-
+.whatsapp img {
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    border-radius: 50%;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+}
+.whatsapp:hover img {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
 .texto-destaque {
     text-align: center;
 }
@@ -331,6 +379,17 @@ li.slick-active button {
     color: #000000;
 }
 
+.hebert {
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+}
+.content-col-3 {
+    margin-left: 250px;
+    margin-right: 250px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
 .col-3 {
     text-align: center;
     padding-left: 15;
@@ -338,12 +397,6 @@ li.slick-active button {
     width: 29%;
     float: left;
     position: relative;
-}
-
-.bloco-imagem img {
-    margin: 0 auto;
-    width: 70%;
-    height: auto;
 }
 
 .bloco-imagem {
@@ -355,6 +408,10 @@ li.slick-active button {
     margin-left: .625rem;
 }
 
+.content #text-box{
+    height: 27.875rem;
+}
+
 .bloco-imagem b,
 p {
     text-align: center;
@@ -363,18 +420,31 @@ p {
 
 .bloco-texto {
     margin-top: 2em;
+    margin-bottom: 1.25rem;
     margin-left: 2.1875rem/*--espaçamento bloco 3  --*/
+}
+
+.bloco-texto p {
+    margin-left: 1.5625rem;
+    margin-right: 1.5625rem;
 }
 
 .bloco-texto img {
     width: 15.625rem;
     height: 10rem;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    border-radius: 10%;
+}
+.bloco-texto:hover img {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
 h3 {
     font-weight: bold;
     font-family: 'Hepta Slab', Helvetica, Arial!important;
 }
+
 
 .bloco-imagens-texto::before {
     /*-- 6 banner inicio config--*/
@@ -413,40 +483,33 @@ h3 {
     color: white;
     text-decoration: underline red;
 }
-
 .col-4 a:hover {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-    font-size: 1.125rem;
-    font-weight: 800;
-    background: linear-gradient(to right, #690606, #690606 50%, #ff0000 50%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% 100%;
-    background-position: 100%;
-    transition: 275ms ease;
-    text-decoration: none;
+position: relative;
+overflow: hidden;
+display: inline-block;
+font-size: 1.125rem;
+font-weight: 800;
+background: linear-gradient(to right, #690606 0%, #690606 50%, #ff0000 50%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-size: 200% 100%;
+background-position: 100%;
+transition: background-position 0.5s;
+text-decoration: none;
 }
-
 .col-4 img {
-    cursor: pointer;
-    margin: 0 auto;
-    padding-top: 1em;
-    vertical-align: middle;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
-
-.col-4 img:hover {
-    margin-top: .625rem!important;
-    position: relative!important;
+.col-4:hover img {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10%;
 }
+.content-mobile-2 {
+    margin-bottom: 170px;
 
-.bloco-logos {
-    height: 10.625rem;
-    /*-- aumentar depois para o mercado livre--*/
 }
-
 .bloco-logos img {
     margin-top: 3.125rem;
 }
@@ -473,6 +536,11 @@ h3 {
     transition: background-position 275ms ease;
     text-decoration: none;
 
+}
+
+.content-mobile-3 {
+    margin-right: 15.625rem;
+    margin-left: 15.625rem;
 }
 
 .footer h3 {
@@ -529,7 +597,7 @@ h3 {
 /*-- rodape--*/
 
 
-/*-- scroll do canto da pagina--*/
+/*-- scroll da pagina--*/
 
 ::-webkit-scrollbar {
     width: .75rem;
@@ -550,9 +618,7 @@ h3 {
     background: linear-gradient(#796060, #791212);
 }
 
-
-/*-- updates--*/
-
+/*-- scroll da pagina--*/
 
 /*-- responsivo--*/
 
@@ -561,84 +627,10 @@ h3 {
         width: 37%;
         margin-right: 69%;
     }
-    .logo {
-        margin-left: 11%;
-    }
-    .redes-sociais {
-        margin-left: 8%;
-        margin-top: 1.125rem;
-    }
-    .busca {
-        margin-top: 4.5625rem;
-        margin-right: 25%;
-    }
-    .busca input {
-        width: 16.75rem;
-    }
-    .texto-destaque h3 {
-        margin-right: 63%;
-    }
-    .texto-destaque h1 {
-        width: 26%;
-        margin-left: 6%;
-        font-size: 1.175rem;
-    }
-    .texto-destaque p {
-        width: 26%;
-        margin-left: 3rem;
-    }
-    .content-mobile p {
-        width: 28%;
-        margin-left: 4.6rem;
-
-    }
-    .bloco-texto {
-        width: 100%;
-    }
-    .col-100 {
-        width: 100%;
-    }
-    .content-mobile-1 {
-        width: 0%;
-    }
-    .content-mobile-1 p {
-        width: 31%;
-        border: none;
-        margin-left: 3%;
-    }
-    .bloco-texto img {
-        margin-right: 64%;
-    }
-    .bloco-imagem {
-        border: none;
-        height: 30.375rem;
-    }
     .bloco-logos img {
         display: flex;
         flex-direction: column;
         margin-left: -9%;
-    }
-    .bloco-logos {
-        height: 33.5625rem;
-    }
-    .content-1 {
-        display: flex;
-        flex-direction: column;
-        margin-left: 36%;
-    }
-
-    .content-2 {
-        display: flex;
-        flex-direction: column;
-        margin-left: 25%;
-    }
-
-    .footer-2 p {
-        padding: 0%;
-    }
-    .content-mobile-3 p {
-        width: 35%;
-        margin-left: 2%;
     }
     .whatsapp {
         margin-right: 45%;
@@ -671,90 +663,8 @@ h3 {
         width: 2.5rem;
     }
 }
+
 @media (min-width:23.375rem) and (max-width: 26.1rem) {
-    .smallerimg img{
-        width: 37%;
-        margin-right: 61%;
-    }
-    .logo {
-        margin-left: 11%;
-    }
-    .redes-sociais {
-        margin-left: 8%;
-        margin-top: 1.125rem;
-    }
-    .busca {
-        margin-top: 4.5625rem;
-        margin-right: 25%;
-    }
-    .busca input {
-        width: 16.75rem;
-    }
-    .texto-destaque h3 {
-        margin-right: 63%;
-    }
-    .texto-destaque h1 {
-        width: 26%;
-        margin-left: 6%;
-        font-size: 1.175rem;
-    }
-    .texto-destaque p {
-        width: 26%;
-        margin-left: 3rem;
-    }
-    .content-mobile p {
-        width: 28%;
-        margin-left: 4.6rem;
-
-    }
-    .bloco-texto {
-        width: 100%;
-    }
-    .col-100 {
-        width: 100%;
-    }
-    .content-mobile-1 {
-        width: 0%;
-    }
-    .content-mobile-1 p {
-        width: 31%;
-        border: none;
-        margin-left: 3%;
-    }
-    .bloco-texto img {
-        margin-right: 64%;
-    }
-    .bloco-imagem {
-        border: none;
-        height: 30.375rem;
-    }
-    .bloco-logos img {
-        display: flex;
-        flex-direction: column;
-        margin-left: -9%;
-    }
-    .bloco-logos {
-        height: 33.5625rem;
-    }
-    .content-1 {
-        display: flex;
-        flex-direction: column;
-        margin-left: 36%;
-    }
-
-    .content-2 {
-        display: flex;
-        flex-direction: column;
-        margin-left: 25%;
-    }
-
-    .footer-2 p {
-        padding: 0%;
-    }
-    .content-mobile-3 p {
-        width: 35%;
-        margin-left: 3%;
-    }
     .whatsapp {
         margin-right: 45%;
         height: 1.875rem;
@@ -788,84 +698,6 @@ h3 {
 }
 
 @media (min-width:26.1rem) and (max-width: 28.5rem) {
-    .smallerimg img{
-        width: 40%;
-        margin-right: 61%;
-    }
-    .logo {
-        margin-left: 12%;
-    }
-    .redes-sociais {
-        margin-left: 6%;
-        margin-top: 1.125rem;
-        width: 100%;
-    }
-    .busca {
-        margin-top: 4.5625rem;
-        margin-right: 25%;
-    }
-    .texto-destaque h3 {
-        margin-right: 69%;
-    }
-    .texto-destaque h1 {
-        width: 38%;
-        font-size: 1.175rem;
-    }
-    .texto-destaque p {
-        width: 32%;
-        margin-left: -1%;
-    }
-    .content-mobile p {
-        width: 33%;
-        margin-left: 6%;
-    }
-    .bloco-texto {
-        width: 100%;
-        margin-left: 7%;
-    }
-    .col-100 {
-        width: 100%;
-    }
-    .content-mobile-1 {
-        width: 0%;
-    }
-    .content-mobile-1 p {
-        width: 32%;
-        border: none;
-    }
-    .bloco-texto img {
-        margin-right: 69%;
-    }
-    .bloco-imagem {
-        border: none;
-    }
-    .bloco-logos img {
-        display: flex;
-        flex-direction: column;
-        margin-left: -9%;
-    }
-    .bloco-logos {
-        height: 33.5625rem;
-    }
-    .content-1 {
-        display: flex;
-        flex-direction: column;
-        margin-left: 38%;
-    }
-
-    .content-2 {
-        display: flex;
-        flex-direction: column;
-        margin-left: 32%;
-    }
-
-    .footer-2 p {
-        padding: 0%;
-    }
-    .content-mobile-3 p {
-        width: 36%;
-        margin-left: 4%;
-    }
     .whatsapp {
         margin-right: 45%;
         height: 1.875rem;
@@ -896,89 +728,9 @@ h3 {
         height: 2.5rem;
         width: 2.5rem;
     }
-    .bloco-imagem b,
-    p {
-        text-align: center;
-        margin-left: 0%;
-    }
 }
 
 @media (min-width:28.5rem) and (max-width: 32.375rem) {
-    .smallerimg img{
-        width: 48%;
-        margin-right: 52%;
-    }
-    .logo {
-        margin-left: 15%;
-    }
-    .redes-sociais {
-        margin-left: 7%;
-        margin-top: 1.125rem;
-        width: 100%;
-    }
-    .busca {
-        margin-top: 4.5625rem;
-        margin-right: 24%;
-    }
-    .texto-destaque h3 {
-        margin-right: 20%;
-    }
-    .texto-destaque h1 {
-        width: 45%;
-        font-size: 1.275rem;
-    }
-    .texto-destaque p {
-        width: 85%;
-    }
-    .content-mobile p {
-        width: 41%;
-        margin-left: 5%;
-    }
-    .bloco-texto {
-        width: 56%;
-    }
-    .col-100 {
-        width: 100%;
-    }
-    .content-mobile-1 {
-        width: 0%;
-    }
-    .content-mobile-1 p {
-        width: 80%;
-        border: none;
-    }
-    .bloco-texto img {
-        margin-right: 20%;
-    }
-    .bloco-imagem {
-        border: none;
-    }
-    .bloco-logos img {
-        display: flex;
-        flex-direction: column;
-    }
-    .bloco-logos {
-        height: 33.5625rem;
-    }
-    .content-1 {
-        display: flex;
-        flex-direction: column;
-        margin-left: 25%;
-    }
-
-    .content-2 {
-        display: flex;
-        flex-direction: column;
-        margin-left: 30%;
-    }
-
-    .footer-2 p {
-        padding: 0%;
-    }
-    .content-mobile-3 p {
-        width: 39%;
-        margin-left: 5%;
-    }
     .whatsapp {
         margin-right: -18%;
         height: 3.4375rem;
@@ -1004,79 +756,6 @@ h3 {
     }
 }
 @media (min-width:32.375rem) and (max-width: 35.75rem) {
-    .smallerimg img{
-        width: 48%;
-        margin-right: 43%;
-    }
-    .logo {
-        margin-left: 20%;
-    }
-    .redes-sociais {
-        margin-left: 14%;
-        margin-top: 1.125rem;
-        width: 100%;
-    }
-    .busca {
-        margin-top: 4.5625rem;
-        margin-right: 17%;
-    }
-    .texto-destaque h1 {
-        width: 53%;
-        margin-left: 2%;
-        font-size: 1.375rem;
-    }
-    .texto-destaque p {
-        width: 81%;
-        margin-left: 6%;
-    }
-    .content-mobile p {
-        width: 46%;
-    }
-    .bloco-texto {
-        width: 57%;
-    }
-    .col-100 {
-        width: 100%;
-    }
-    .content-mobile-1 {
-        width: 0%;
-    }
-    .content-mobile-1 p {
-        width: 82%;
-        border: none;
-        margin-left: 8%;
-    }
-    .bloco-texto img {
-    }
-    .bloco-imagem {
-        border: none;
-    }
-    .bloco-logos img {
-        display: flex;
-        flex-direction: column;
-    }
-    .bloco-logos {
-        height: 33.5625rem;
-    }
-    .content-1 {
-        display: flex;
-        flex-direction: column;
-        margin-left: 29%;
-    }
-
-    .content-2 {
-        display: flex;
-        flex-direction: column;
-        margin-left: 35%;
-    }
-
-    .footer-2 p {
-        padding: 0%;
-    }
-    .content-mobile-3 p {
-        width: 48%;
-        margin-left: 3%;
-    }
     .whatsapp {
         margin-right: -18%;
         height: 3.4375rem;
@@ -1090,9 +769,6 @@ h3 {
     #navbar ul li:hover ul {
         width: 100%;
         position: relative;
-    }
-    .bloco-imagens-texto::before {
-        background-image: none;
     }
     .slick-slide {
         height: 17.1875rem !important;
@@ -1105,78 +781,6 @@ h3 {
     }
 }
 @media (min-width:35.75rem) and (max-width: 38.3125rem) {
-    .smallerimg img{
-        width: 48%;
-        margin-right: 43%;
-    }
-    .logo {
-        margin-left: 20%;
-    }
-    .redes-sociais {
-        margin-left: 14%;
-        margin-top: 1.125rem;
-        width: 100%;
-    }
-    .busca {
-        margin-top: 4.5625rem;
-        margin-right: 17%;
-    }
-    .texto-destaque h1 {
-        width: 53%;
-        margin-left: 2%;
-        font-size: 1.375rem;
-    }
-    .texto-destaque p {
-        width: 94%;
-        margin-left: 6%;
-    }
-    .content-mobile p {
-        width: 50%;
-    }
-    .bloco-texto {
-        width: 57%;
-    }
-    .col-100 {
-        width: 100%;
-    }
-    .content-mobile-1 {
-        width: 0%;
-    }
-    .content-mobile-1 p {
-        width: 100%;
-        border: none;
-    }
-    .bloco-texto img {
-    }
-    .bloco-imagem {
-        border: none;
-    }
-    .bloco-logos img {
-        display: flex;
-        flex-direction: column;
-    }
-    .bloco-logos {
-        height: 33.5625rem;
-    }
-    .content-1 {
-        display: flex;
-        flex-direction: column;
-        margin-left: 29%;
-    }
-
-    .content-2 {
-        display: flex;
-        flex-direction: column;
-        margin-left: 35%;
-    }
-
-    .footer-2 p {
-        padding: 0%;
-    }
-    .content-mobile-3 p {
-        width: 48%;
-        margin-left: 3%;
-    }
     .whatsapp {
         margin-right: -18%;
         height: 3.4375rem;
@@ -1190,9 +794,6 @@ h3 {
     #navbar ul li:hover ul {
         width: 100%;
         position: relative;
-    }
-    .bloco-imagens-texto::before {
-        background-image: none;
     }
     .slick-slide {
         height: 17.1875rem !important;
@@ -1206,84 +807,6 @@ h3 {
 }
 
 @media (min-width:38.375rem) and (max-width: 41.9375rem) {
-    .smallerimg img{
-        width: 48%;
-        margin-right: 40%;
-    }
-    .logo {
-        margin-left: 27%;
-    }
-    .redes-sociais {
-        margin-left: 19%;
-        margin-top: 1.125rem;
-        width: 100%;
-    }
-    .busca {
-        margin-top: 4.5625rem;
-        margin-right: 11%;
-    }
-    .texto-destaque h3 {
-        margin-right: -7%;
-    }
-    .texto-destaque h1 {
-        width: 53%;
-        margin-left: 3%;
-        font-size: 1.575rem;
-    }
-    .texto-destaque p {
-        width: 100%;
-    }
-    .content-mobile p {
-        width: 64%;
-    }
-    .bloco-texto {
-        width: 56%;
-    }
-    .col-100 {
-        width: 100%;
-    }
-    .content-mobile-1 {
-        width: 0%;
-    }
-    .content-mobile-1 p {
-        width: 103%;
-        border: none;
-        font-size: 1.125rem;
-    }
-    .bloco-texto img {
-        margin-right: -5%;
-    }
-    .bloco-imagem {
-        border: none;
-    }
-    .bloco-logos img {
-        display: flex;
-        flex-direction: column;
-    }
-    .bloco-logos {
-        height: 33.5625rem;
-    }
-    .content-1 {
-        display: flex;
-        flex-direction: column;
-        margin-left: 10%;
-        width: 129.6875rem;
-        font-size: 1.125rem;
-    }
-
-    .content-2 {
-        display: flex;
-        flex-direction: column;
-        margin-left: 39%;
-    }
-
-    .footer-2 p {
-        padding: 0%;
-    }
-    .content-mobile-3 p {
-        width: 66%;
-        margin-left: 0%;
-    }
     .whatsapp {
         height: 7.8125rem;
     }
@@ -1297,9 +820,6 @@ h3 {
         width: 100%;
         position: relative;
     }
-    .bloco-imagens-texto::before {
-        background-image: none;
-    }
     .slick-slide {
         height: 19.6875rem !important;
     }
@@ -1310,197 +830,7 @@ h3 {
         width: 3.4375rem;
     }
 }
-@media (min-width:41.9375rem) and (max-width: 44.3125rem) {
-    .smallerimg img{
-        width: 50%;
-        margin-right: 25%;
-    }
-    .logo {
-        margin-left: 27%;
-    }
-    .redes-sociais {
-        margin-left: 19%;
-        margin-top: 1.125rem;
-        width: 100%;
-    }
-    .busca {
-        margin-top: 4.5625rem;
-        margin-right: 11%;
-    }
-    .texto-destaque h3 {
-        margin-right: -30%;
-    }
-    .texto-destaque h1 {
-        width: 75%;
-        margin-left: 0%;
-        font-size: 1.450rem;
-    }
-    .texto-destaque p {
-        width: 110%;
-        margin-left: 7%;    
-    }
-    .content-mobile p {
-        width: 65%;
-        margin-left: 5%;
-    }
-    
-    .bloco-texto {
-        width: 56%;
-    }
-    .col-100 {
-        width: 100%;
-    }
-    .content-mobile-1 {
-        width: 0%;
-    }
-    .content-mobile-1 p {
-        width: 112%;
-        border: none;
-        font-size: 1.125rem;
-        margin-left: 7%;
-    }
-    .bloco-texto img {
-        margin-right: -25%;
-    }
-    .bloco-imagem {
-        border: none;
-    }
-    .bloco-logos img {
-        display: flex;
-        flex-direction: column;
-    }
-    .bloco-logos {
-        height: 33.5625rem;
-    }
-    .content-1 {
-        display: flex;
-        flex-direction: column;
-        margin-left: 12%;
-        width: 129.6875rem;
-        font-size: 1.125rem;
-    }
-
-    .content-2 {
-        display: flex;
-        flex-direction: column;
-        margin-left: 36%;
-    }
-
-    .footer-2 p {
-        padding: 0%;
-    }
-    .content-mobile-3 p {
-        width: 67%;
-        margin-left: 1%;
-    }
-    .whatsapp {
-        margin-right: -10%;
-        height: 6.9375rem;
-    }
-    .whatsapp img {
-        width: 100%;
-    }
-    #navbar ul li {
-        display: block;
-    }
-    #navbar ul li:hover ul {
-        width: 100%;
-        position: relative;
-    }
-    .bloco-imagens-texto::before {
-        background-image: none;
-    }
-    .slick-slide {
-        height: 22.5rem !important;
-    }
-    button.slick-prev,
-    button.slick-next {
-        background-size: 4.0625rem;
-        height: 4.0625rem;
-        width: 3.4375rem;
-    }
-}
 @media (min-width:44.3125rem) and (max-width: 46.1875rem) {
-    .smallerimg img{
-        width: 50%;
-        margin-right: 25%;
-    }
-    .logo {
-        margin-left: 27%;
-    }
-    .redes-sociais {
-        margin-left: 19%;
-        margin-top: 1.125rem;
-        width: 100%;
-    }
-    .busca {
-        margin-top: 4.5625rem;
-        margin-right: 11%;
-    }
-    .texto-destaque h3 {
-        margin-right: -30%;
-    }
-    .texto-destaque h1 {
-        width: 75%;
-        margin-left: 0%;
-        font-size: 1.450rem;
-    }
-    .texto-destaque p {
-        width: 125%;
-    }
-    .content-mobile p {
-        width: 68%;
-        margin-left: 4%;
-    }
-    
-    .bloco-texto {
-        width: 56%;
-    }
-    .col-100 {
-        width: 100%;
-    }
-    .content-mobile-1 {
-        width: 0%;
-    }
-    .content-mobile-1 p {
-        width: 126%;
-        border: none;
-        font-size: 1.125rem;
-    }
-    .bloco-texto img {
-        margin-right: -25%;
-    }
-    .bloco-imagem {
-        border: none;
-    }
-    .bloco-logos img {
-        display: flex;
-        flex-direction: column;
-    }
-    .bloco-logos {
-        height: 33.5625rem;
-    }
-    .content-1 {
-        display: flex;
-        flex-direction: column;
-        margin-left: 12%;
-        width: 129.6875rem;
-        font-size: 1.125rem;
-    }
-
-    .content-2 {
-        display: flex;
-        flex-direction: column;
-        margin-left: 33%;
-    }
-
-    .footer-2 p {
-        padding: 0%;
-    }
-    .content-mobile-3 p {
-        width: 70%;
-        margin-left: 1%;
-    }
     .whatsapp {
         margin-right: -10%;
         height: 6.9375rem;
@@ -1514,9 +844,6 @@ h3 {
     #navbar ul li:hover ul {
         width: 100%;
         position: relative;
-    }
-    .bloco-imagens-texto::before {
-        background-image: none;
     }
     .slick-slide {
         height: 22.5rem !important;
@@ -1529,84 +856,6 @@ h3 {
     }
 }
 @media (min-width:46.1875rem) and (max-width: 49.8125rem) {
-    .smallerimg img{
-        width: 50%;
-        margin-right: 25%;
-    }
-    .logo {
-        margin-left: 27%;
-    }
-    .redes-sociais {
-        margin-left: 19%;
-        margin-top: 1.125rem;
-        width: 100%;
-    }
-    .busca {
-        margin-top: 4.5625rem;
-        margin-right: 11%;
-    }
-    .texto-destaque h3 {
-        margin-right: -30%;
-    }
-    .texto-destaque h1 {
-        width: 75%;
-        margin-left: 0%;
-        font-size: 1.650rem;
-    }
-    .texto-destaque p {
-        width: 125%;
-    }
-    .content-mobile p {
-        width: 78%;
-    }
-    .bloco-texto {
-        width: 56%;
-    }
-    .col-100 {
-        width: 100%;
-    }
-    .content-mobile-1 {
-        width: 0%;
-    }
-    .content-mobile-1 p {
-        width: 126%;
-        border: none;
-        font-size: 1.125rem;
-    }
-    .bloco-texto img {
-        margin-right: -25%;
-    }
-    .bloco-imagem {
-        border: none;
-    }
-    .bloco-logos img {
-        display: flex;
-        flex-direction: column;
-    }
-    .bloco-logos {
-        height: 33.5625rem;
-    }
-    .content-1 {
-        display: flex;
-        flex-direction: column;
-        margin-left: 12%;
-        width: 129.6875rem;
-        font-size: 1.125rem;
-    }
-
-    .content-2 {
-        display: flex;
-        flex-direction: column;
-        margin-left: 33%;
-    }
-
-    .footer-2 p {
-        padding: 0%;
-    }
-    .content-mobile-3 p {
-        width: 78%;
-        margin-left: 1%;
-    }
     .whatsapp {
         margin-right: -10%;
         height: 6.9375rem;
@@ -1620,9 +869,6 @@ h3 {
     #navbar ul li:hover ul {
         width: 100%;
         position: relative;
-    }
-    .bloco-imagens-texto::before {
-        background-image: none;
     }
     .slick-slide {
         height: 22.5rem !important;
@@ -1636,86 +882,6 @@ h3 {
 }
 
 @media (min-width:49.8125rem) and (max-width: 53.125rem) {
-    .smallerimg img{
-        width: 50%;
-        margin-right: 12%;
-    }
-    .logo {
-        margin-left: 27%;
-    }
-    .redes-sociais {
-        margin-left: 19%;
-        margin-top: 1.125rem;
-        width: 100%;
-    }
-    .busca {
-        margin-top: 4.5625rem;
-        margin-right: 11%;
-    }
-    .texto-destaque h3 {
-        margin-right: -52%;
-    }
-    .texto-destaque h1 {
-        width: 88%;
-        margin-left: 0%;
-        font-size: 1.550rem;
-    }
-    .texto-destaque p {
-        width: 145%;
-    }
-    .content-mobile p {    
-        width: 82%;
-        margin-left: 2%;
-    }
-    .bloco-texto {
-        width: 56%;
-    }
-    .col-100 {
-        width: 100%;
-    }
-    .content-mobile-1 {
-        width: 0%;
-    }
-    .content-mobile-1 p {
-        width: 135%;
-        border: none;
-        font-size: 1.125rem;
-        margin-left: 8%;
-    }
-    .bloco-texto img {
-        margin-right: -51%;
-    }
-    .bloco-imagem {
-        border: none;
-    }
-    .bloco-logos img {
-        display: flex;
-        flex-direction: column;
-    }
-    .bloco-logos {
-        height: 33.5625rem;
-    }
-    .content-1 {
-        display: flex;
-        flex-direction: column;
-        margin-left: 22%;
-        width: 129.6875rem;
-        font-size: 1.125rem;
-    }
-
-    .content-2 {
-        display: flex;
-        flex-direction: column;
-        margin-left: 43%;
-    }
-
-    .footer-2 p {
-        padding: 0%;
-    }
-    .content-mobile-3 p {
-        width: 81%;
-        margin-left: 1%;
-    }
     .whatsapp {
         margin-right: -10%;
         height: 6.9375rem;
@@ -1730,9 +896,6 @@ h3 {
         width: 100%;
         position: relative;
     }
-    .bloco-imagens-texto::before {
-        background-image: none;
-    }
     .slick-slide {
         height: 22.5rem !important;
     }
@@ -1745,89 +908,12 @@ h3 {
 }
 
 @media (min-width:53.1875rem) and (max-width: 59.375rem) {
-    .smallerimg img{
-        width: 55%;
-        margin-right: 6%;
-    }
-    .logo {
-        margin-left: 15%;
-    }
-    .redes-sociais {
-        margin-left: 45%;
-        margin-top: -4.25rem;
-        width: 100%;
-    }
-    .busca {
-        margin-top: 3.5625rem;
-        margin-right: 5%;
-    }
-    .texto-destaque h3 {
-        margin-right: -64%;
-    }
-    
-    .texto-destaque h1 {
-        width: 95%;
-        margin-left: 0%;
-        font-size: 1.700rem;
-    }
-    .texto-destaque p {
-        width: 154%;
-    }
-    .content-mobile p {
-        width: 90%;
-    }
-    .bloco-texto {
-        width: 56%;
-    }
-    .col-100 {
-        width: 100%;
-    }
-    .content-mobile-1 {
-        width: 35%;
-    }
-    .content-mobile-1 p {
-        width: 156%;
-        border: none;
-        font-size: 1.125rem;
-    }
-    .bloco-texto img {
-        margin-right: -61%;
-    }
-    .bloco-imagem {
-        border: none;
-    }
-    .bloco-logos img {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .content-1 {
-        margin-left: 10%;
-        width: 45.25rem;
-    }
-
-    .content-2 {
-        display: flex;
-        flex-direction: column;
-        margin-left: 40%;
-    }
-
-    .footer-2 p {
-        padding: 0%;
-    }
-    .content-mobile-3 p {
-        width: 85%;
-        margin-left: 1%;
-    }
     .whatsapp {
         margin-right: -10%;
         height: 6.9375rem;
     }
     .whatsapp img {
         width: 100%;
-    }
-    .bloco-imagens-texto::before {
-        background-image: none;
     }
     .slick-slide {
         height: 28.125rem !important;
@@ -1841,108 +927,205 @@ h3 {
 }
 
 @media (min-width:59.4375rem) and (max-width: 65.625rem) {
-    .logo {
-        margin-left: 2%;
-        width: 65%;
-    }
-    .texto-destaque h3 {
-        margin-right: -30%;
-    }
-
-    .texto-destaque p {
-        width: 125%;
-    }
-    .content-mobile p {
-        width: 95%;
-    }
-    .bloco-texto {
-        width: 75%;
-    }
-    .col-100 {
-        width: 100%;
-    }
-    .content-mobile-1 {
-        width: 35%;
-    }
-    .content-mobile-1 p {
-        width: 126%;
-        border: none;
-        font-size: 1.125rem;
-    }
-    .bloco-texto img {
-        margin-right: -25%;
-    }
-    .bloco-imagem {
-        border: none;
-    }
-    .bloco-logos img {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .content-1 {
-        margin-left: 10%;
-        width: 45.25rem;
-    }
-
-    .content-2 {
-        display: flex;
-        flex-direction: column;
-        margin-left: 40%;
-    }
-
-    .footer-2 p {
-        padding: 0%;
-    }
-    .content-mobile-3 p {
-        width: 95%;
-    }
     .whatsapp {
         margin-right: -10%;
         height: 6.9375rem;
     }
-    .bloco-imagens-texto::before {
-        background-image: none;
+}
+/*-- header --*/
+@media (min-width: 30.5625rem) and (max-width: 90.75rem) {
+
+    .header-1 {
+        flex-direction: column;
+    }
+    .logo {
+        padding-bottom: 1.25rem;
+    }
+    .redes-sociais {
+        padding-top: 1.5625rem;
+    }
+
+}
+
+@media (min-width: 12.5rem) and (max-width: 30.5625rem) {
+
+    .header-1 {
+        margin-left: 0rem;
+        margin-right: 0rem;
+        flex-direction: column;
+    }
+    .logo {
+        padding-bottom: 1.25rem;
+    }
+    .redes-sociais {
+        padding-top: 1.5625rem;
+    }
+}
+/*-- header--*/
+
+/*-- col-100 --*/
+@media (min-width: 63.1875rem) and (max-width: 92.5rem) {
+
+    .content-col-3 {
+        margin-left: 50px;
+        margin-right: 50px;
+        display: flex;
+        justify-content: center;
     }
 }
 
-@media (min-width:65.625rem) and (max-width: 71.875rem) {
-    .content-mobile-1 p {
+@media (min-width: 12.5rem) and (max-width: 63.1875rem) {
+    .col-3 {
         width: 100%;
-        border: none;
-        font-size: 1.125rem;
+
     }
-    .bloco-texto img {
-        width: 95%;
+    .content-col-3 {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    .bloco-texto {
+        margin-left: 0;
+    } 
+
+}
+/*-- col-100 --*/
+
+/*-- col-3 bloco texto --*/
+@media (min-width: 12.5rem) and (max-width: 84.1875rem) {
+
+    .content-mobile-1 {
+        margin-left: 0;
+        margin-right: 0;
     }
     .bloco-imagem {
-        height: 41.375rem;
+        height: 37.5rem;
     }
 }
 
-@media (min-width:71.9375rem) and (max-width: 78.125rem) {
-
-    .content-mobile-1 p {
-        width: 100%;
-        border: none;
-        font-size: 1.125rem;
+@media (min-width: 12.5rem) and (max-width: 63.1875rem) {
+    .content-0 {
+        display: flex;
+        padding-right: .3125rem;
+        padding-left: .3125rem;
     }
+    .content-0 #text-box {
+        padding-right: .9375rem;
+        margin-right: .9375rem;
+    }
+    .content-0 #text-box-2 {
+        padding-right: .9375rem;
+        margin-right: .9375rem;
+    }
+}
+
+@media (min-width: 12.5rem) and (max-width: 53.5rem) {
+    .content-0 {
+        display: flex;
+        padding-right: 7.3125rem;
+        padding-left: 7.3125rem;    
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 12.5rem) and (max-width: 32.8125rem) {
+    .content-0 {
+        display: flex;
+        padding-right: 1.5625rem;
+        padding-left: 1.5625rem;    
+        flex-direction: column;
+    }
+}
+@media (min-width: 12.5rem) and (max-width: 21.8125rem) {
     .bloco-imagem {
-        height: 41.375rem;
+        height: 43.75rem;
     }
 }
+/*-- col-3 bloco texto --*/
 
-@media (min-width:78.1875rem) and (max-width: 84.375rem) {
+/*-- content marcas --*/
+@media (min-width: 12.5rem) and (max-width: 80.4375rem) {
+    .content-1 {
+        margin-left: 4.25rem;
+        margin-right: 4.25rem;
+    }
+}
+@media (min-width: 12.5rem) and (max-width: 58.625rem) {
+    .content-1 {
+        margin-left: 0%;
+        margin-right: .625rem;
+    }
+}
+@media (min-width: 12.5rem) and (max-width: 53.4375rem) {
+    .content-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    .content-mobile-2 {
+        margin-bottom: 20px;
+    }
+}
+@media (min-width: 12.5rem) and (max-width: 22.9375rem) {
+    .content-1 {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+}
+/*-- content marcas --*/
 
-    .content-mobile-1 p {
+/*-- footer --*/
+@media (min-width: 12.5rem) and (max-width: 77.625rem) {
+    .footer {
+        padding-left: 3.125rem;
+        padding-right: 3.125rem;
+    }
+}
+@media (min-width: 12.5rem) and (max-width: 49.5625rem) {
+    .col-4 {
         width: 100%;
-        border: none;
-        font-size: 1.125rem;
+        float: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    .bloco-imagem {
-        height: 41.375rem;
+    .footer {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+    .footer p {
+        width: auto;
+        text-align: center;
+        margin-right: 2.5rem;
+        margin-left: 2.5rem;
+    }
+    
+    .content-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
+/*-- footer --*/
 
+/*-- baseboard --*/
+@media (min-width: 12.5rem) and (max-width: 88.8125rem) {
+    .content-mobile-3{
+        margin-right: 6.25rem;
+        margin-left: 6.25rem;
+    }
+    
+}
+@media (min-width: 12.5rem) and (max-width: 70.5625rem) {
+    .content-mobile-3{
+        margin-right: 0%;
+        margin-left: 0%;
+    }
+    
+}
+/*-- baseboard --*/
 
 /*-- responsivo--*/

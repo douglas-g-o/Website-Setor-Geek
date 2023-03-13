@@ -41,15 +41,14 @@ function entrar(){
   })
    
   if(usuario.value == userValid.user && senha.value == userValid.senha){
-    window.location.href = 'logado.html'
+    window.location.href = 'index.html'
     
     let mathRandom = Math.random().toString(16).substr(2)
     let token = mathRandom + mathRandom
     
     localStorage.setItem('token', token)
     localStorage.setItem('userLogado', JSON.stringify(userValid))
-} 
-else {
+  } else {
     userLabel.setAttribute('style', 'color: red')
     usuario.setAttribute('style', 'border-color: red')
     senhaLabel.setAttribute('style', 'color: red')
@@ -57,6 +56,8 @@ else {
     msgError.setAttribute('style', 'display: block')
     msgError.innerHTML = 'Usuário ou senha incorretos'
     usuario.focus()
-}
+  }
   
 }
+
+

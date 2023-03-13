@@ -27,37 +27,28 @@ function checkInputs() {
     }
 
     if(emailValue === '') {
-        // mostrar erro
-        // add classe
         setErrorFor(email, 'Preencha esse campo')
     } else if (!isEmail(emailValue)) {
         setErrorFor(email, 'Email inválido')
     } else {
-        // adicionar a classe de sucesso
         setSuccessFor(email)
     }
    
     if(subjectValue === '') {
-        // mostrar erro
-        // add classe
         setErrorFor(subject, 'Preencha esse campo')
 
     } else if(subjectValue.length < 8) { 
         setErrorFor(subject, 'Senha deve ter mais que 8 caracteres')
     } else {
-        // adicionar a classe de sucesso
         setSuccessFor(subject)
     }
 
     if(telefoneValue === '') {
-        // mostrar erro
-        // add classe
         setErrorFor(telefone, 'Preencha esse campo')
 
     } else if(telefoneValue !== telefone) { 
         setErrorFor(telefone, 'Senhas não tão iguais')
     } else {
-        // adicionar a classe de sucesso
         setSuccessFor(telefone)
     }
 

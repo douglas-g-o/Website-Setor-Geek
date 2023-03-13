@@ -78,7 +78,7 @@ confirmSenha.addEventListener('keyup', () => {
 })
 
 function cadastrar(){
-  if(validNome && validUsuario && validSenha && validConfirmSenha && usuario.value != ' ' && senha.value != ' '){
+  if(validNome && validUsuario && validSenha && validConfirmSenha){
     let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
     
     listaUser.push(
