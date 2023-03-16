@@ -10,8 +10,7 @@
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
     <link rel="stylesheet" type="text/css" href="./css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link rel="stylesheet" type="text/css" href="./css/login.css">
-    <link rel="stylesheet" type="text/css" href="./css/cadastro.css">
+    <link rel="stylesheet" type="text/css" href="./css/registerfirebase.css">
    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -19,7 +18,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <!-- Icon Favicon -->
     <link rel="icon" href="./img/favicon.png">
-
+    <!-- complements -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -31,14 +31,14 @@
                 </div>
                 <form action="#" method="get">
                     <div class="search-bar">
-                        <input type="text" placeholder="Buscar..." id="search-input" list="search-suggestions">
+                        <input type="text" placeholder="Olá, o que você procura?" id="search-input" list="search-suggestions">
                         <datalist id="search-suggestions" class="browserdata">
                             <option value="Camiseta" data-url="camisetas.html"></option>
                             <option value="Decoração" data-url="decora.html"></option>
                             <option value="Colecionaveis" data-url="colecionaveis.html"></option>
                             <option value="Caneca" data-url="canecas.html"></option>
-                            <option value="Manga" data-url="manga.html"></option>
-                            <option value="Placa" data-url="placa.html"></option>
+                            <option value="Manga/HQ" data-url="manga.html"></option>
+                            <option value="Placa e Quadros" data-url="placa.html"></option>
                             <option value="Cadastro" data-url="cadastro.html"></option>
                             <option value="Login" data-url="login.html"></option>
                             <option value="Inicio da pagina" data-url="index.html"></option>
@@ -107,56 +107,73 @@
 
     <div class="col-100-3">
         <div class="container">
-            <form action="" id="registerForm">
-                <div class='card'>
-                    <h1> Cadastrar </h1>
-    
+            <div id="content_container">
+                <div id="form_container">
+                    <div id="form_header_container">
+                        <h1 id="form_header">Cadastrar</h1>
+                    </div>
                     <div id='msgError'></div>
                     <div id='msgSuccess'></div>
-    
-                    <div class="label-float">
-                        <input type="text" id="nome" placeholder=" " required>
-                        <label id="labelNome" for="nome">Nome</label>
+                    <div id="form_content_container">
+                        <div id="form_content_inner_container">
+                            <div class="form-group">
+                                <div class="floating-label">
+                                    <input type="text" id="first_name" name="first_name" class="form-control" required>
+                                    <label id="labelname" for="name">Nome</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="floating-label">
+                                    <input type="text" id="last_name" name="last_name" class="form-control" required>
+                                    <label id="label_lastname" for="last_name">Sobrenome</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="floating-label">
+                                    <input type="text" id="email" name="email" class="form-control" required>
+                                    <label id="labelemail" for="email">Email</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="floating-label">
+                                    <input type="password" id="password" name="password" class="form-control" required>
+                                    <label id="labelpassword" for="password">Senha</label>
+                                    <span class="password-toggle" data-target="#password">
+                                        <i class="fas fa-eye"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="floating-label">
+                                    <input type="password" id="confirm_password" name="confirm_password"
+                                        class="form-control" required>
+                                    <label id="labelconfirm_password" for="confirm_password">Confirmar senha</label>
+                                    <span class="password-toggle" data-target="#confirm_password">
+                                    </span>
+                                </div>
+                            </div>
+                            <div id="button_container">
+                                <button onclick="register()">Cadastrar</button>
+                                <div id="back-login">
+                                    <a href="login.html"><button>Cancelar</button></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-    
-                    <div class="label-float">
-                        <input type="text" id="usuario" placeholder=" " required>
-                        <label id="labelUsuario" for="usuario">Usuário</label>
-                    </div>
-    
-                    <div class="label-float">
-                        <input type="password" id="senha" placeholder=" " required>
-                        <label id="labelSenha" for="senha">Senha</label>
-                        <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
-                    </div>
-    
-                    <div class="label-float">
-                        <input type="password" id="confirmSenha" placeholder=" " required>
-                        <label id="labelConfirmSenha" for="confirmSenha">Confirmar Senha</label>
-                        <i id="verConfirmSenha" class="fa fa-eye" aria-hidden="true"></i>
-                    </div>
-    
-                    <div class='justify-center'>
-                        <button onclick='cadastrar()'>Cadastrar</button>
-                    </div>
-    
                 </div>
-            
-            </form>
+            </div>
         </div>
     </div>
 
     <footer>
         <div class="col-100 footer">
             <div class="content-2">
-
                 <div class="col-4">
                     <h3><b>Nossa meta</b></h3>
                     <p>O Setor Geek nasceu com o objetivo de se tornar a maior comunidade de comércio geek do Brasil. Sabemos que para chegar nesse resultado precisamos oferecer aos nossos clientes um atendimento de qualidade, segurança nas negociações e
                         preços abaixo dos praticados pelo mercado.
                     </p>
                 </div>
-
                 <div class="col-4">
                     <h3><b>Fundadores</b></h3>
                     <a href="https://www.instagram.com/douglas6gama/" target="blank">
@@ -174,7 +191,6 @@
                     <a href="https://www.instagram.com/c4mp1to/" target="blank">
                         <p>@c4mp1to<br></a>
                 </div>
-
                 <div class="col-4">
                     <h3><b>Produtos</b></h3>
                     <p>
@@ -192,9 +208,7 @@
                             <p>Placas e Quadros<br></a>
                     </p>
                 </div>
-
                 <div class="col-4">
-                    <div class="imagem-2">
                         <h3><b>Loja física</b></h3>
                         <p>
                             EM BREVE <br>
@@ -211,8 +225,6 @@
                         <a href="https://api.whatsapp.com/send?phone=5511941104068&text=Oi,%20me%20tira%20algumas%20dúvidas%20sobre%20como%20comprar%20no%20Setor Geek?" target=”_blank”>
                             <p class="telefone">11-94110-4068</p>
                         </a>
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -220,9 +232,7 @@
     </footer>
 
     <div class="col-100 footer-2">
-
         <div class="content-mobile-3">
-
             <div class="content">
                 <p>
                     © 2022-2022 Proibida a reprodução sem autorização. SETOR GEEK PRODUTOS COMERCIO DE VESTUÁRIO E ACESSÓRIOS LTDA | CNPJ: 29.428.420/0001-55 |
@@ -240,11 +250,15 @@
         </li>
     </div>
 
-    <script type="text/javascript" src="./js/cadastro.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
-    <script type="text/javascript" src="./js/register.js"></script>
-    <script type="text/javascript" src="./js/search.js"></script>
-
 </body>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+<!-- js -->
+<script type="text/javascript" src="./js/search.js"></script>
+<script type="text/javascript" src="./js/registerfirebase.js"></script>
 
 </html>

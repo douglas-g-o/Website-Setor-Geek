@@ -1,0 +1,199 @@
+#form_container {
+    background-color: #ffffff80;
+    border-radius: 4%;
+    box-shadow: 0.1875rem 0.1875rem 0.0625rem 0rem #00000070;
+    margin-top: 9.375rem;
+    height: auto;
+    width: 26.3125rem;
+}
+
+#form_header_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.875rem;
+    padding-bottom: 0rem;
+    
+}
+
+#form_content_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    
+}
+
+#form_content_inner_container {
+    width: 80%;    
+}
+
+#form_container input {
+    width: 100%;
+    padding: 0.3125rem 0.3125rem;
+    display: inline-block;
+    border: 0;
+    border-bottom: 0.125rem solid #0a0808;
+    background-color: transparent;
+    outline: none;
+    min-width: 11.25rem;
+    font-size: 1rem;
+    transition: all .3s ease-out;
+    border-radius: 0;
+}
+
+#button_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin-top: .625rem;
+    margin-bottom: 1.875rem;
+}
+
+#button_container button {
+    background-color: transparent;
+    border-color: #0a0808;
+    color: #000000;
+    padding: 0.4375rem;
+    font-weight: bold;
+    font-size: 12pt;
+    margin-top: 1.25rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    outline: none;
+    transition: all .4s ease-out;
+    margin-right: 1.5625rem;
+}
+#button_container button:hover {
+    background-color: #0a0808;
+    color: #f80000;
+}
+#msgError{
+    text-align: center;
+    color: #ff0000;
+    background-color: #ffbbbb;
+    padding: .625rem;
+    border-radius: .25rem;
+    display: none;
+    margin-right: 1.25rem;
+    margin-left: 1.25rem;
+    margin-bottom: .3125rem;
+  }
+
+#msgSuccess{
+    text-align: center;
+    color: #02ff02;
+    background-color: #bbffbe;
+    padding: .625rem;
+    border-radius: .25rem;
+    display: none;
+    margin-right: 1.25rem;
+    margin-left: 1.25rem;
+    margin-bottom: .3125rem;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5625rem;
+}
+
+.floating-label label {
+    position: absolute;
+    left: 0.3125rem;
+    top: .5rem;
+    font-size: .8125rem;
+    color: #0a0808;
+    transition: all .3s ease-out;
+    pointer-events: none;
+}
+
+.floating-label input:focus + label {
+    transform: translateY(-1.4rem);
+    font-size: .75rem;
+}
+
+.floating-label input:not(:placeholder-shown):valid + label,
+.floating-label input:focus + label {
+    transform: translateY(-1.4rem);
+    font-size: .75rem;
+}
+
+#labelemail, #labelpassword {
+    font-size: 1rem;
+}
+
+#signup_button {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    border: 2px solid red;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    margin-top: 10px;
+    font-size: 19px;
+    margin-top: 24px;
+    }
+#signup_button:hover{
+    transform: scale(1.1);
+    box-shadow: 0rem 0rem 1.25rem rgba(0, 0, 0, 0.5);
+    background-color: red;
+    color: white;
+}
+
+#signup_text {
+    font-size: 1rem;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: .625rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+.password-toggle i::before {
+    content: "\f06e";
+}
+  
+.show-password i::before {
+    content: "\f070";
+}
+  
+/* nao tem no registerfirebase */
+
+#signup_container {
+    margin-bottom: 3.125rem;
+}
+
+#signup_container hr {
+    margin-left: 3.125rem;
+    margin-right: 3.125rem;
+    margin-bottom: .9375rem;
+
+}
+.floating-label {
+    margin-top: 1.25rem;
+}
+ 
+/* responsivo */
+@media (min-width: 19.75rem) and (max-width: 27.625rem) {
+    #form_container {
+        width: 20.3125rem;
+    }
+
+    #form_container input {
+        margin-top: 1.25rem;
+    }
+}
+@media (min-width: 12.5rem) and (max-width: 19.75rem) {
+    #form_container {
+        width: 17.8125rem;
+    }
+    #form_container input {
+        margin-top: 1.25rem; 
+    }
+}

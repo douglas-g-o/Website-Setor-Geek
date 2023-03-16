@@ -646,10 +646,6 @@ text-decoration: none;
         width: 100%;
         position: relative;
     }
-    .whatsapp {
-        margin-right: 56%;
-        height: 5.125rem;
-    }
     .whatsapp img {
         width: 75%;
     }
@@ -993,7 +989,7 @@ text-decoration: none;
 /*-- col-100 --*/
 
 /*-- col-3 bloco texto --*/
-@media (min-width: 12.5rem) and (max-width: 84.1875rem) {
+@media (min-width: 58.125rem) and (max-width: 84.1875rem) {
 
     .content-mobile-1 {
         margin-left: 0;
@@ -1001,6 +997,16 @@ text-decoration: none;
     }
     .bloco-imagem {
         height: 37.5rem;
+    }
+}
+@media (min-width: 12.5rem) and (max-width: 58.125rem) {
+    .content-mobile-1 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .bloco-imagem {
+        height: 40.625rem;
     }
 }
 

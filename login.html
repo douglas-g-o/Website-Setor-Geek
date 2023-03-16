@@ -8,10 +8,11 @@
     <link rel="stylesheet" type="text/css" href="./css/normalize.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link rel="stylesheet" type="text/css" href="./css/login.css">
+    <link rel="stylesheet" type="text/css" href="./css/loginfirebase.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Hepta+Slab:400,700|Lato:400,700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="icon" href="./img/favicon.png">
 
@@ -28,14 +29,14 @@
                 </div>
                 <form action="#" method="get">
                     <div class="search-bar">
-                        <input type="text" placeholder="Buscar..." id="search-input" list="search-suggestions">
+                        <input type="text" placeholder="Olá, o que você procura?" id="search-input" list="search-suggestions">
                         <datalist id="search-suggestions" class="browserdata">
                             <option value="Camiseta" data-url="camisetas.html"></option>
                             <option value="Decoração" data-url="decora.html"></option>
                             <option value="Colecionaveis" data-url="colecionaveis.html"></option>
                             <option value="Caneca" data-url="canecas.html"></option>
-                            <option value="Manga" data-url="manga.html"></option>
-                            <option value="Placa" data-url="placa.html"></option>
+                            <option value="Manga/HQ" data-url="manga.html"></option>
+                            <option value="Placa e Quadros" data-url="placa.html"></option>
                             <option value="Cadastro" data-url="cadastro.html"></option>
                             <option value="Login" data-url="login.html"></option>
                             <option value="Inicio da pagina" data-url="index.html"></option>
@@ -100,37 +101,48 @@
             </nav>
         </div>
     </main>
-
+    <div id="firebaseui-auth-container"></div>
     <div class="col-100-3">
         <div class='container'>
-            <div class='card'>
-                <h1> Entrar </h1>
+            <div id="content_container">
+                <div id="form_container">
+                    <div id="form_header_container">
+                        <h1 id="form_header">Entrar</h1>
+                    </div>
+                    <div id='msgError'></div>
+                    <div id='msgSuccess'></div>
+                    <div id="form_content_container">
+                        <div id="form_content_inner_container">
 
-                <div id='msgError'></div>
-
-                <div class='label-float'>
-                    <input type='text' id='usuario' paceholder='' required>
-                    <label id='userLabel' for='usuario'>Usuário</label>
+                            <div class="form-group">
+                                <div class="floating-label">
+                                    <input type="text" id="email" name="email" class="form-control" required>
+                                    <label id="labelemail" for="email">Email</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="floating-label">
+                                    <input type="password" id="password" name="password" class="form-control" required>
+                                    <label id="labelpassword" for="password">Senha</label>
+                                    <span class="password-toggle" data-target="#password">
+                                        <i class="fas fa-eye"></i>
+                                    </span>
+                                </div>
+                            </div>
+        
+        
+                            <div id="button_container">
+                                <button onclick="login()">Entrar</button>
+                            </div>
+                            <div id="signup_container">
+                                <hr>
+                                <span id="signup_text"></span>
+                                <a href="cadastro.html" id="signup_button">Criar conta</a>
+                            </div>
+        
+                        </div>
+                    </div>
                 </div>
-
-                <div class='label-float'>
-                    <input type='password' id='senha' paceholder='' required>
-                    <label id='senhaLabel' for='senha'>Senha</label>
-                    <i class="fa fa-eye" aria-hidden="true"></i>
-                </div>
-
-                <div class='justify-center'>
-                    <button onclick='entrar()'>Entrar</button>
-                </div>
-
-                <div class='justify-center'>
-                    <hr>
-                </div>
-
-                <p> Não tem uma conta?
-                    <a href='cadastro.html'> Cadastre-se </a>
-                </p>
-
             </div>
         </div>
     </div>
@@ -183,7 +195,6 @@
                 </div>
 
                 <div class="col-4">
-                    <div class="imagem-2">
                         <h3><b>Loja física</b></h3>
                         <p>
                             EM BREVE <br>
@@ -201,8 +212,6 @@
                             <p class="telefone">11-94110-4068</p>
                         </a>
                     </div>
-
-                </div>
             </div>
         </div>
         </div>
@@ -229,11 +238,26 @@
         </li>
     </div>
 
-    <script type="text/javascript" src="./js/usuarioinicio.js"></script>
-    <script type="text/javascript" src="./js/login.js"></script>
-    <script type="text/javascript" src="./js/cadastro.js"></script>
-    <script type="text/javascript" src="./js/search.js"></script>
-
 </body>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+
+
+
+    <!-- <script type="text/javascript" src="./js/usuarioinicio.js"></script> -->
+    <!-- <script type="text/javascript" src="./js/login.js"></script> -->
+    <!-- <script type="text/javascript" src="./js/cadastro.js"></script> -->
+    <!-- <script type="text/javascript" src="./js/firebase-login.js"></script> -->
+    <!-- <script type="text/javascript" src="./js/register.js"></script> -->
+    <script type="text/javascript" src="./js/search.js"></script>
+    <script type="text/javascript" src="./js/loginfirebase.js"></script>
+
 
 </html>
