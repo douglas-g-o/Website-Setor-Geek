@@ -78,8 +78,7 @@
 {
     display: none;
     float: left;
-
-    height: 600px; /*--altura inicio logos--*/
+    /* height: 600px; --altura inicio logos-- */
     min-height: 1px;
 }
 [dir='rtl'] .slick-slide

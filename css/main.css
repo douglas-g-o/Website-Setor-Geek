@@ -15,7 +15,7 @@ body {
     margin-right: 0 !important;
 }
 
-.menu-principal {
+.main-menu {
     margin-top: 1rem;
 }
 
@@ -35,6 +35,7 @@ main,
 .content-2 {
     margin: 0 auto;
 }
+
 .header-1 {
     display: flex;
     justify-content: space-between;
@@ -44,7 +45,73 @@ main,
     margin-bottom: 10px;
   }
 
- /* barra de pesquisa */
+ /*--social-media--*/
+:root
+{
+    --bg: #222;
+}
+
+.social-media ul
+{
+    display: flex;
+    gap: .0625rem;
+    font-size: .625rem;
+}
+
+.social-media ul li{
+    position: relative;
+    list-style: none;
+    width: 4.9375rem;
+    height: 3.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.social-media ul li:hover {
+    z-index: 10000;
+    transform: scale(0.65);
+}
+
+.social-media ul li::before {
+    content: '';
+    position: absolute;
+    inset: 1.875rem;
+    box-shadow: 0 0 0 .625rem var(--clr),
+    0 0 0 1.25rem var(--bg),
+    0 0 0 1.375rem var(--clr);
+    transition: 0.5s;
+}
+.social-media ul li:hover::before {
+    inset: 0rem;
+}
+
+.social-media ul li::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--bg);
+    transform: rotate(45deg);
+
+}
+
+.social-media ul li a {
+    position: relative;
+    text-decoration: none;
+    color: var(--clr);
+    z-index: 10;
+    font-size: 2em;
+    transition: 0.5s;
+}
+.social-media ul li:hover a {
+    font-size: 3em;
+    filter: drop-shadow(0 0 2.5rem var(--clr)) drop-shadow(0 0 3.75rem var(--clr)) drop-shadow(0 0 5rem var(--clr));
+}
+/*--social-media--*/
+ 
+/* barra de pesquisa */
 
 .search-bar {
     background-color: #000;
@@ -321,10 +388,10 @@ button.slick-next {
 
 .slick-dots {
     position: absolute;
-    top: 35em;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+}
 
 li.slick-active button {
     background: #000000;
@@ -399,13 +466,19 @@ li.slick-active button {
     position: relative;
 }
 
-.bloco-imagem {
-    height: 36.625rem;
+#box .bloco-imagem {
+    height: 400px;
     /*--para caber mais contexto --*/
     border: .0625rem solid #c5c5c5;
     padding-top: .9375rem;
     padding-bottom: .9375rem;
-    margin-left: .625rem;
+}
+#box2 .bloco-imagem {
+    height: 500px;
+    /*--para caber mais contexto --*/
+    border: .0625rem solid #c5c5c5;
+    padding-top: .9375rem;
+    padding-bottom: .9375rem;
 }
 
 .content #text-box{
@@ -623,10 +696,6 @@ text-decoration: none;
 /*-- responsivo--*/
 
 @media  (max-width: 23.374rem) {
-    .smallerimg img{
-        width: 37%;
-        margin-right: 69%;
-    }
     .bloco-logos img {
         display: flex;
         flex-direction: column;
@@ -648,9 +717,6 @@ text-decoration: none;
     }
     .whatsapp img {
         width: 75%;
-    }
-    .slick-slide {
-        height: 12.5rem !important;
     }
     button.slick-prev,
     button.slick-next {
@@ -682,9 +748,6 @@ text-decoration: none;
     .whatsapp img {
         width: 75%;
     }
-    .slick-slide {
-        height: 12.5rem !important;
-    }
     button.slick-prev,
     button.slick-next {
         background-size: 2.5rem;
@@ -715,9 +778,6 @@ text-decoration: none;
     .whatsapp img {
         width: 80%;
     }
-    .slick-slide {
-        height: 16.25rem !important;
-    }
     button.slick-prev,
     button.slick-next {
         background-size: 2.5rem;
@@ -741,9 +801,6 @@ text-decoration: none;
         width: 100%;
         position: relative;
     }
-    .slick-slide {
-        height: 16.25rem !important;
-    }
     button.slick-prev,
     button.slick-next {
         background-size: 2.5rem;
@@ -765,9 +822,6 @@ text-decoration: none;
     #navbar ul li:hover ul {
         width: 100%;
         position: relative;
-    }
-    .slick-slide {
-        height: 17.1875rem !important;
     }
     button.slick-prev,
     button.slick-next {
@@ -791,9 +845,6 @@ text-decoration: none;
         width: 100%;
         position: relative;
     }
-    .slick-slide {
-        height: 17.1875rem !important;
-    }
     button.slick-prev,
     button.slick-next {
         background-size: 3.4375rem;
@@ -815,9 +866,6 @@ text-decoration: none;
     #navbar ul li:hover ul {
         width: 100%;
         position: relative;
-    }
-    .slick-slide {
-        height: 19.6875rem !important;
     }
     button.slick-prev,
     button.slick-next {
@@ -841,9 +889,6 @@ text-decoration: none;
         width: 100%;
         position: relative;
     }
-    .slick-slide {
-        height: 22.5rem !important;
-    }
     button.slick-prev,
     button.slick-next {
         background-size: 4.0625rem;
@@ -865,9 +910,6 @@ text-decoration: none;
     #navbar ul li:hover ul {
         width: 100%;
         position: relative;
-    }
-    .slick-slide {
-        height: 22.5rem !important;
     }
     button.slick-prev,
     button.slick-next {
@@ -892,9 +934,6 @@ text-decoration: none;
         width: 100%;
         position: relative;
     }
-    .slick-slide {
-        height: 22.5rem !important;
-    }
     button.slick-prev,
     button.slick-next {
         background-size: 4.0625rem;
@@ -910,9 +949,6 @@ text-decoration: none;
     }
     .whatsapp img {
         width: 100%;
-    }
-    .slick-slide {
-        height: 28.125rem !important;
     }
     button.slick-prev,
     button.slick-next {
@@ -937,7 +973,7 @@ text-decoration: none;
     .logo {
         padding-bottom: 1.25rem;
     }
-    .redes-sociais {
+    .social-media {
         padding-top: 1.5625rem;
     }
 
@@ -953,7 +989,7 @@ text-decoration: none;
     .logo {
         padding-bottom: 1.25rem;
     }
-    .redes-sociais {
+    .social-media {
         padding-top: 1.5625rem;
     }
 }
@@ -971,105 +1007,128 @@ text-decoration: none;
 }
 
 @media (min-width: 12.5rem) and (max-width: 63.1875rem) {
-    .col-3 {
-        width: 100%;
 
-    }
     .content-col-3 {
         display: flex;
         flex-direction: column;
         margin: 0;
         padding: 0;
+        align-items: center;
     }
-    .bloco-texto {
-        margin-left: 0;
-    } 
-
+    #boxLogo .bloco-texto {
+        margin-left: 0%;
+    }
+    #boxLogo .col-3 {
+        width: 100%;
+ 
+    }
 }
 /*-- col-100 --*/
 
 /*-- col-3 bloco texto --*/
-@media (min-width: 58.125rem) and (max-width: 84.1875rem) {
-
+@media (min-width: 12.5rem) and (max-width: 100.75rem) {
     .content-mobile-1 {
-        margin-left: 0;
         margin-right: 0;
-    }
-    .bloco-imagem {
-        height: 37.5rem;
-    }
-}
-@media (min-width: 12.5rem) and (max-width: 58.125rem) {
-    .content-mobile-1 {
         margin-left: 0;
-        margin-right: 0;
     }
+}
 
+@media (min-width: 54.8125rem) and (max-width: 80.5625rem) {
+    #box .bloco-imagem {
+        height: 500px;
+        
+    }
+    #box2 .bloco-imagem {
+        height: 700px;
+    }    
+}
+
+@media (min-width: 46.375rem) and (max-width: 54.8125rem) {
     .bloco-imagem {
-        height: 40.625rem;
+        display: inline-block;
+        width: 45%;
+    }
+    #box .bloco-imagem {
+        height: 600px;
+        
+    }
+    #box2 .bloco-imagem {
+        height: 600px;
     }
 }
 
-@media (min-width: 12.5rem) and (max-width: 63.1875rem) {
-    .content-0 {
-        display: flex;
-        padding-right: .3125rem;
-        padding-left: .3125rem;
-    }
-    .content-0 #text-box {
-        padding-right: .9375rem;
-        margin-right: .9375rem;
-    }
-    .content-0 #text-box-2 {
-        padding-right: .9375rem;
-        margin-right: .9375rem;
-    }
-}
-
-@media (min-width: 12.5rem) and (max-width: 53.5rem) {
-    .content-0 {
-        display: flex;
-        padding-right: 7.3125rem;
-        padding-left: 7.3125rem;    
-        flex-direction: column;
-    }
-}
-
-@media (min-width: 12.5rem) and (max-width: 32.8125rem) {
-    .content-0 {
-        display: flex;
-        padding-right: 1.5625rem;
-        padding-left: 1.5625rem;    
-        flex-direction: column;
-    }
-}
-@media (min-width: 12.5rem) and (max-width: 21.8125rem) {
+@media (min-width: 38.125rem) and (max-width: 46.375rem) {
     .bloco-imagem {
-        height: 43.75rem;
+        display: inline-block;
+        width: 45%;
+        margin-left: 15px;/*--espaçamento bloco 3 --*/;
     }
+    #box .bloco-imagem {
+        height: 650px;
+        
+    }
+    #box2 .bloco-imagem {
+        height: 650px;
+    }
+
 }
+
+@media (min-width: 35.5625rem) and (max-width: 38.125rem) {
+    .bloco-imagem {
+        display: inline-block;
+        width: 45%;
+        margin-left: 15px;/*--espaçamento bloco 3 --*/;
+    }
+    #box .bloco-imagem {
+        height: 700px;
+        
+    }
+    #box2 .bloco-imagem {
+        height: 700px;
+    }
+
+}
+@media (min-width: 12.5rem) and (max-width: 35.5625rem) {
+    #box .bloco-imagem {
+        height: 480px;
+        width: 93%;
+        margin-left: 15px;
+        margin-right: 15px;  
+    }
+    #box2 .bloco-imagem {
+        height: 580px;
+        width: 93%;
+        margin-left: 15px;
+        margin-right: 15px; 
+    }
+
+}
+
+
 /*-- col-3 bloco texto --*/
 
 /*-- content marcas --*/
-@media (min-width: 12.5rem) and (max-width: 80.4375rem) {
+@media (min-width: 58.625rem) and (max-width: 80.4375rem) {
     .content-1 {
         margin-left: 4.25rem;
         margin-right: 4.25rem;
     }
 }
-@media (min-width: 12.5rem) and (max-width: 58.625rem) {
+@media (min-width: 53.4375rem) and (max-width: 58.625rem) {
     .content-1 {
         margin-left: 0%;
         margin-right: .625rem;
     }
 }
-@media (min-width: 12.5rem) and (max-width: 53.4375rem) {
+@media (min-width: 22.9375rem) and (max-width: 53.4375rem) {
     .content-1 {
         display: flex;
         flex-direction: column;
         justify-content: center;
         flex-wrap: wrap;
         align-content: center;
+        margin-left: 0%;
+        margin-right: 0%;
     }
     .content-mobile-2 {
         margin-bottom: 20px;
@@ -1080,11 +1139,14 @@ text-decoration: none;
         margin-left: 0%;
         margin-right: 0%;
     }
+    .content-mobile-2 {
+        margin-bottom: 20px;
+    }
 }
 /*-- content marcas --*/
 
 /*-- footer --*/
-@media (min-width: 12.5rem) and (max-width: 77.625rem) {
+@media (min-width: 49.5625rem) and (max-width: 77.625rem) {
     .footer {
         padding-left: 3.125rem;
         padding-right: 3.125rem;
@@ -1118,7 +1180,7 @@ text-decoration: none;
 /*-- footer --*/
 
 /*-- baseboard --*/
-@media (min-width: 12.5rem) and (max-width: 88.8125rem) {
+@media (min-width: 70.5625rem) and (max-width: 88.8125rem) {
     .content-mobile-3{
         margin-right: 6.25rem;
         margin-left: 6.25rem;
@@ -1133,5 +1195,67 @@ text-decoration: none;
     
 }
 /*-- baseboard --*/
+
+
+/*-- carrosel --*/
+@media (min-width: 46.0625rem) and (max-width: 68.375rem) {
+    .slick-dots {
+        top: 86%;
+    }
+    .slick-dots li button {
+        width: 1.325rem;
+        height: 1.325rem;
+    }
+    
+}
+
+@media (min-width: 34.3125rem) and (max-width: 46.0625rem) {
+    .slick-dots {
+        top: 82%;
+    }
+    .slick-dots li button {
+        width: 1.125rem;
+        height: 1.125rem;
+    }
+    
+}
+
+@media (min-width: 26.875rem) and (max-width: 34.3125rem) {
+    .slick-dots {
+        top: 79%;
+    }
+    .slick-dots li button {
+        width: 1.025rem;
+        height: 1.025rem;
+    }
+    
+}
+
+@media (min-width: 22.6875rem) and (max-width: 26.875rem) {
+    .slick-dots {
+        top: 75%;
+    }
+    .slick-dots li button {
+        width: .875rem;
+        height: .875rem;
+    }
+    
+}
+
+@media (min-width: 12.5rem) and (max-width: 22.6875rem) {
+    .slick-dots {
+        top: 72%;
+    }
+    .slick-dots li button {
+        width: .75rem;
+        height: .75rem;
+    }
+    
+}
+/*-- carrosel --*/
+
+/*-- slick carrosel --*/
+
+/*-- slick carrosel --*/
 
 /*-- responsivo--*/
