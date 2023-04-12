@@ -52,7 +52,7 @@ main,
     margin-left: 15.625rem;
     margin-right: 15.625rem;
     margin-bottom: .625rem;
-  }
+}
 
  /*--social-media--*/
 :root
@@ -160,6 +160,7 @@ main,
 .fa-search {
     font-size: 1rem;
 }
+
 
 
 /* barra de pesquisa */
@@ -346,6 +347,15 @@ main,
   }
 
 /*--carrosel--*/
+
+.imagem-1,
+.imagem-2,
+.imagem-3,
+.imagem-4,
+.imagem-5 {
+    max-width: 100%;
+    height: auto;
+}
 
 button.slick-prev {
     font-size: 0rem;
@@ -765,7 +775,7 @@ text-decoration: none;
 
 .card:hover img {
     left: 105%;
-    height: 19.75rem;
+    height: 17.75rem;
     clip-path: circle(25rem at center);
 }
 
@@ -898,7 +908,7 @@ text-decoration: none;
         
     }
     .card img {
-        top: 83%;
+        top: 88%;
         left: 39%;
     }
     .card .circle::before {
@@ -1648,7 +1658,7 @@ section.team h1 {
 
 @media (min-width: 22.6875rem) and (max-width: 26.875rem) {
     .slick-dots {
-        top: 75%;
+        top: 89%;
     }
     .slick-dots li button {
         width: .875rem;
